@@ -1,0 +1,9 @@
+@use './base/variables' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: $bg-primary;
+}
