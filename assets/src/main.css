@@ -1,6 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+header .button-header {
+  background-color: transparent;
+  width: 143px;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  border-radius: 100px;
+  outline: 1px solid #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 11px;
+  letter-spacing: -0.24px;
+  padding: 17.5px 20px 16.5px 20px;
+  gap: initial;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+header .button-header:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+header .button-header:focus {
+  outline-offset: 2px;
+}
+header .button-header:active {
+  background-color: rgba(0, 0, 0, 0);
+}
+header .containerLogo {
+  padding-left: 7px;
+  gap: 17px;
+}
+header .containerLogo .logo {
+  position: relative;
+  bottom: 0.5px;
+  height: 38px;
+}
+header .containerLogo .logoTexte {
+  position: relative;
+  bottom: -0.5px;
+  font-size: 26.9px;
+  font-weight: 500;
+  letter-spacing: -0.58px;
+  line-height: 38.39px;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 89px;
+  width: calc(100% - 163px);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+  margin-top: 87.5px;
+}
+.heroTitle {
+  font-size: clamp(2rem, 10vw, 140px);
+  text-align: center;
+  word-break: break-word;
+  width: clamp(300px, 50vw, 690px);
+  line-height: clamp(2rem, 10vw, 126px);
+  font-weight: 700;
+  letter-spacing: -6.9px;
+  text-transform: uppercase;
+  background: radial-gradient(52.95% 52.95% at 47.05% 50%, #FFF 0%, rgba(255, 255, 255, 0.55) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heroContent {
+  gap: 39.6px;
+  width: clamp(320px, 50vw, 420px);
+}
+.heroContentText {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-weight: 400;
+  font-size: clamp(14px, 5vw, 18px);
+  line-height: clamp(18px, 6vw, 24px);
+}
+.heroContentButtons {
+  gap: 25px;
+}
+.heroContentButtons .button-primary {
+  background-color: #FF6B6B;
+  width: 194px;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  padding: inherit;
+  gap: initial;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+.heroContentButtons .button-primary:hover {
+  background-color: #ff3838;
+  color: white;
+}
+.heroContentButtons .button-primary:focus {
+  outline-offset: 2px;
+}
+.heroContentButtons .button-primary:active {
+  background-color: #ff1f1f;
+}
+.heroContentButtons .button-secondary {
+  background-color: transparent;
+  width: 192px;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  border-radius: 100px;
+  outline: 1px solid #ffffff;
+  cursor: pointer;
+  text-transform: none;
+  line-height: 10px;
+  letter-spacing: normal;
+  padding: 14px 19px;
+  gap: 12.5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+.heroContentButtons .button-secondary:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.heroContentButtons .button-secondary:focus {
+  outline-offset: 2px;
+}
+.heroContentButtons .button-secondary:active {
+  background-color: rgba(0, 0, 0, 0);
+}
+.heroContentButtons .button-secondary::before {
+  content: url("../assets/images/ic_play.svg");
+  position: relative;
+}
+.heroContent .square {
+  position: absolute;
+  top: 13.5px;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: 1124px;
+  height: 800px;
+  z-index: -1;
+  border-radius: 0;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.squares {
+  position: absolute;
+  top: 24px;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 528px;
+  height: 936px;
+  z-index: -2;
+  border-radius: 0;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  background: transparent;
+}
+.squares1 {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 528px;
+  height: 936px;
+  z-index: -1;
+  border-radius: 17px;
+  -webkit-backdrop-filter: blur(62px);
+          backdrop-filter: blur(62px);
+  background: transparent;
+  background-image: url("../assets/images/rectangle-violet.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.squares2 {
+  position: relative;
+  top: 95px;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 415px;
+  height: 360px;
+  z-index: -2;
+  border-radius: 0;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  background: transparent;
+  background-image: url("../assets/images/diamond.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.squares3 {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 22%;
+  transform: none;
+  width: 282px;
+  height: 256px;
+  z-index: -1;
+  border-radius: 0;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {
   background-color: #0F1012;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
 }/*# sourceMappingURL=main.css.map */

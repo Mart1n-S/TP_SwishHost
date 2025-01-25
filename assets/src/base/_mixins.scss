@@ -1,0 +1,81 @@
+// Mixin pour les boutons
+@mixin button($background,
+    $width,
+    $height,
+    $font-size,
+    $font-weight,
+    $text-transform,
+    $letter-spacing,
+    $outline: none,
+    $line-height: normal,
+    $padding: inherit,
+    $gap: initial) {
+    background-color: $background;
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: white;
+    text-align: center;
+    border-radius: 100px;
+    outline: $outline;
+    cursor: pointer;
+    text-transform: $text-transform;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    padding: $padding;
+    gap: $gap;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.2s ease,
+        color 0.3s ease;
+
+    &:hover {
+        background-color: darken($background, 10%);
+        color: lighten(#fff, 20%);
+    }
+
+    &:focus {
+        outline-offset: 2px;
+    }
+
+    &:active {
+        background-color: darken($background, 15%);
+    }
+}
+
+// Mixin pour les rectangles
+@mixin rectangle($position,
+    $top: auto,
+    $bottom: auto,
+    $left: auto,
+    $transform: none,
+    $width,
+    $height,
+    $bgImage: null,
+    $bgSize: 100%,
+    $bgRepeat: no-repeat,
+    $zIndex: auto,
+    $borderRadius: 0,
+    $backdropFilter: none,
+    $bgColor: transparent) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    transform: $transform;
+    width: $width;
+    height: $height;
+    z-index: $zIndex;
+    border-radius: $borderRadius;
+    backdrop-filter: $backdropFilter;
+    background: $bgColor;
+
+    @if $bgImage {
+        background-image: $bgImage;
+        background-size: $bgSize;
+        background-repeat: $bgRepeat;
+    }
+}

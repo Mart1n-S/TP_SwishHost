@@ -1,0 +1,47 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+// Les carrés qui composent le fond de la page 
+.squares {
+    @include mixin.rectangle($position: absolute,
+        $top: 24px,
+        $left: 50%,
+        $transform: translate(-50%, 0),
+        $width: 528px,
+        $height: 936px,
+        $zIndex: -2);
+
+    &1 {
+        @include mixin.rectangle($position: absolute,
+            $top: 0,
+            $left: 50%,
+            $transform: translate(-50%, 0),
+            $width: 528px,
+            $height: 936px,
+            $bgImage: url('../assets/images/rectangle-violet.svg'),
+            $zIndex: -1,
+            $borderRadius: 17px,
+            $backdropFilter: blur(62px));
+    }
+
+    &2 {
+        @include mixin.rectangle($position: relative,
+            $top: 95px,
+            $left: 50%,
+            $transform: translate(-50%, 50%),
+            $width: 415px,
+            $height: 360px,
+            $bgImage: url('../assets/images/diamond.svg'),
+            $zIndex: -2);
+    }
+
+    &3 {
+        @include mixin.rectangle($position: absolute,
+            $bottom: 0,
+            $left: 22%,
+            $width: 282px,
+            $height: 256px,
+            $bgColor: rgba(0, 0, 0, 0.20),
+            $zIndex: -1);
+    }
+}

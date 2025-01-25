@@ -1,0 +1,81 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+// Le style qui compose la hero section
+.hero {
+    margin-top: 87.5px;
+
+    &Title {
+        font-size: clamp(2rem, 10vw, $font-size-lg);
+        text-align: center;
+        word-break: break-word;
+        width: clamp(300px, 50vw, 690px);
+        line-height: clamp(2rem, 10vw, 126px);
+        font-weight: $font-weight-bold;
+        letter-spacing: $spacing-small;
+        text-transform: uppercase;
+        background: radial-gradient(52.95% 52.95% at 47.05% 50%, #FFF 0%, rgba(255, 255, 255, 0.55) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &Content {
+        gap: 39.6px;
+        width: clamp(320px, 50vw, 420px);
+
+        &Text {
+            color: rgba(255, 255, 255, 0.80);
+            text-align: center;
+            font-weight: $font-weight-regular;
+            font-size: clamp(14px, 5vw, $font-size-xl);
+            line-height: clamp(18px, 6vw, 24px);
+        }
+
+        &Buttons {
+            gap: 25px;
+
+            .button-primary {
+                @include mixin.button($background: $button-primary,
+                    $width: 194px,
+                    $height: 54px,
+                    $font-size: $font-size-sm,
+                    $font-weight: $font-weight-bold,
+                    $text-transform: none,
+                    $letter-spacing: 0.1px,
+                    $outline: none,
+                    $line-height: normal);
+            }
+
+            .button-secondary {
+                @include mixin.button($background: transparent,
+                    $width: 192px,
+                    $height: min-content,
+                    $font-size: $font-size-sm,
+                    $font-weight: $font-weight-bold,
+                    $text-transform: none,
+                    $letter-spacing: normal,
+                    $outline: 1px solid #ffffff,
+                    $line-height: 10px,
+                    $padding: 14px 19px,
+                    $gap: 12.5px);
+            }
+
+            .button-secondary::before {
+                content: url('../assets/images/ic_play.svg');
+                position: relative;
+            }
+        }
+
+        .square {
+            @include mixin.rectangle($position: absolute,
+                $top: 13.5px,
+                $width: 1124px,
+                $height: 800px,
+                $bgColor: rgba(0, 0, 0, 0.20),
+                $zIndex: -1);
+        }
+    }
+
+
+}

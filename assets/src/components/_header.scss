@@ -1,0 +1,46 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+header {
+    .button-header {
+        @include mixin.button($background: transparent,
+            $width: 143px,
+            $height: min-content,
+            $font-size: $font-size-xs,
+            $font-weight: $font-weight-medium,
+            $text-transform: uppercase,
+            $letter-spacing: $spacing-extra-small,
+            $outline: 1px solid #ffffff,
+            $line-height: 11px,
+            $padding: 17.5px 20px 16.5px 20px);
+    }
+
+    .containerLogo {
+        padding-left: 7px;
+        gap: 17px;
+
+        .logo {
+            position: relative;
+            bottom: 0.5px;
+            height: 38px;
+        }
+
+        .logoTexte {
+            position: relative;
+            bottom: -0.5px;
+            font-size: $font-size-md;
+            font-weight: $font-weight-medium;
+            letter-spacing: $spacing-small-md;
+            line-height: 38.39px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 89px;
+        width: calc(100% - 163px);
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
