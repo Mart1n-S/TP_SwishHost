@@ -160,6 +160,58 @@ header::after {
           backdrop-filter: none;
   background: rgba(0, 0, 0, 0.2);
 }
+.hero .circuit1 {
+  position: absolute;
+  left: 0;
+  top: 241px;
+}
+.hero .circuit2 {
+  position: absolute;
+  right: 0;
+  top: 355px;
+}
+
+.brands {
+  margin-top: 223px;
+}
+.brands .round-blur {
+  position: absolute;
+  width: 1596px;
+  height: 503px;
+  border-radius: 50%;
+  background: rgba(55, 87, 142, 0.7);
+  filter: blur(70.5px);
+  transform: translate(40px, 0);
+  bottom: 43px;
+}
+.brandsContent {
+  width: 2001px;
+  padding: 77px 0;
+  height: 378px;
+  flex-shrink: 0;
+  border-radius: 2001px;
+  background: #111215;
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+          clip-path: ellipse(50% 50% at 50% 50%);
+}
+.brandsContentTitle {
+  font-size: clamp(2rem, 10vw, 56px);
+  text-align: center;
+  word-break: break-word;
+  width: 100%;
+  line-height: clamp(2rem, 10vw, 126px);
+  font-weight: 500;
+  letter-spacing: -2.9px;
+  text-transform: uppercase;
+  background: radial-gradient(52.95% 52.95% at 47.05% 50%, #FFF 0%, rgba(255, 255, 255, 0.55) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brandsContentLogos {
+  gap: 64.17px;
+  margin-top: 6px;
+}
 
 .squares {
   position: absolute;
@@ -228,7 +280,9 @@ header::after {
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: #0F1012;
-  color: #FFFFFF;
   font-family: "Inter", sans-serif;
+  background-image: url("../assets/images/bg-test5.svg");
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+@use '../base/variables' as *;
+
+// Le style qui compose la brands section
+.brands {
+    margin-top: 223px;
+
+    .round-blur {
+        position: absolute;
+        width: 1596px;
+        height: 503px;
+        border-radius: 50%;
+        background: rgba(55, 87, 142, 0.70);
+        filter: blur(70.5px);
+        transform: translate(40px, 0);
+        bottom: 43px;
+    }
+
+    &Content {
+        width: 2001px;
+        padding: 77px 0;
+        height: 378px;
+        flex-shrink: 0;
+        border-radius: 2001px;
+        background: $bg-tertiary;
+        clip-path: ellipse(50% 50% at 50% 50%);
+
+        &Title {
+            font-size: clamp(2rem, 10vw, $font-size-xxl);
+            text-align: center;
+            word-break: break-word;
+            width: 100%;
+            line-height: clamp(2rem, 10vw, 126px);
+            font-weight: $font-weight-medium;
+            letter-spacing: -2.9px;
+            text-transform: uppercase;
+            background: $text-title;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &Logos {
+            gap: 64.17px;
+            margin-top: 6px;
+        }
+    }
+}

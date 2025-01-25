@@ -1,17 +1,23 @@
 @use './base/variables' as *;
-@use './base/mixins' as *;
 @use './components/_header';
 @use './components/_hero';
+@use './components/_brands';
 @use './components/_squares';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    background-color: $bg-primary;
-    color: $text-primary;
+    // background-color: $bg-primary;
+    // color: $text-primary;
     font-family: $font-family-primary;
+
+    // Test pour le pixel perfect
+    background-image: url('../assets/images/bg-test5.svg');
+    background-size: 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    // Test pour le pixel perfect
 }
