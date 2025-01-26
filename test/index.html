@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel Témoignages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200">
+
+    <!-- Testimonial section -->
+    <section class="relative py-16 testimonial">
+        <!-- Images circuit imprimés pour le background -->
+        <img src="./assets/images/circuit1.svg" class="absolute top-0 left-0 z-0 circuit1" alt="Circuit1">
+        <img src="./assets/images/circuit3.svg" class="absolute top-0 left-0 z-0 circuit2" alt="Circuit2">
+
+        <div class="relative z-10 flex flex-col items-center justify-center text-center">
+            <h2 class="mb-4 text-4xl font-semibold">What our clients said</h2>
+            <p class="text-xl text-gray-600">Risus viverra justo sagittis vestibulum metus.</p>
+        </div>
+
+        <div
+            class="flex items-center justify-center testimonialCards relative z-10 w-[1057px] h-[375px] overflow-hidden">
+
+            <!-- Cards -->
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Card 1-->
+                <div class="flex gap-6 card w-[1057px] h-[375px] bg-white shadow-lg rounded-lg">
+                    <img src="./assets/images/quote.svg" class="w-12 h-12 ml-6 quote mt-14" alt="Quote">
+                    <div class="flex flex-col gap-8 p-6">
+                        <img src="./assets/images/etoiles.svg" class="w-32 stars" alt="Stars">
+                        <p class="text-lg leading-7 text-gray-800 cardText">
+                            SwiftServerHub has been fantastic for my business website. It's fast, reliable, and the
+                            customer support is top-notch. My site loads quickly, keeping my visitors happy. Highly
+                            recommend!
+                        </p>
+                        <div class="flex items-center justify-between cardFooter">
+                            <div class="flex gap-6 cardAuthor">
+                                <div class="bg-green-200 rounded-full avatar w-14 h-14"></div>
+                                <div class="flex flex-col items-start justify-between cardAuthorText">
+                                    <p class="text-lg font-medium cardAuthorName">Fadilla Nur</p>
+                                    <p class="text-sm text-gray-500 cardAuthorStatus">Product Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2-->
+                <div class="flex gap-6 card w-[1057px] h-[375px] bg-white shadow-lg rounded-lg">
+                    <img src="./assets/images/quote.svg" class="w-12 h-12 ml-6 quote mt-14" alt="Quote">
+                    <div class="flex flex-col gap-8 p-6">
+                        <img src="./assets/images/etoiles.svg" class="w-32 stars" alt="Stars">
+                        <p class="text-lg leading-7 text-gray-800 cardText">
+                            SwiftServerHub has been a game-changer for my online store. The hosting is incredibly
+                            reliable, and their support team is always ready to assist. My customers appreciate the
+                            quick load times. Highly satisfied!
+                        </p>
+                        <div class="flex items-center justify-between cardFooter">
+                            <div class="flex gap-6 cardAuthor">
+                                <div class="bg-green-200 rounded-full avatar w-14 h-14"></div>
+                                <div class="flex flex-col items-start justify-between cardAuthorText">
+                                    <p class="text-lg font-medium cardAuthorName">Alex Dupont</p>
+                                    <p class="text-sm text-gray-500 cardAuthorStatus">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3-->
+                <div class="flex gap-6 card w-[1057px] h-[375px] bg-white shadow-lg rounded-lg">
+                    <img src="./assets/images/quote.svg" class="w-12 h-12 ml-6 quote mt-14" alt="Quote">
+                    <div class="flex flex-col gap-8 p-6">
+                        <img src="./assets/images/etoiles.svg" class="w-32 stars" alt="Stars">
+                        <p class="text-lg leading-7 text-gray-800 cardText">
+                            The team at SwiftServerHub has been exceptional. Their service is unmatched, and I have seen
+                            a significant improvement in website performance.
+                        </p>
+                        <div class="flex items-center justify-between cardFooter">
+                            <div class="flex gap-6 cardAuthor">
+                                <div class="bg-green-200 rounded-full avatar w-14 h-14"></div>
+                                <div class="flex flex-col items-start justify-between cardAuthorText">
+                                    <p class="text-lg font-medium cardAuthorName">Jane Doe</p>
+                                    <p class="text-sm text-gray-500 cardAuthorStatus">Marketing Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination buttons -->
+            <div class="absolute flex items-center justify-between w-full px-6 bottom-4">
+                <button id="prev" class="p-2 text-gray-700 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                    &#10094;
+                </button>
+                <button id="next" class="p-2 text-gray-700 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const cards = document.querySelectorAll("#carousel .card");
+        const totalCards = cards.length;
+        const carousel = document.getElementById("carousel");
+
+        // Largeur d'une carte
+        const cardWidth = 1057;
+
+        const nextButton = document.getElementById("next");
+        const prevButton = document.getElementById("prev");
+
+        nextButton.addEventListener("click", () => {
+            // Incrémenter l'index de la carte suivante
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener("click", () => {
+            // Décrémenter l'index de la carte précédente
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            // Calculer l'offset en fonction de l'index actuel
+            const offset = -currentIndex * cardWidth;
+            carousel.style.transform = `translateX(${offset}px)`; // Déplacer le carrousel
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -421,6 +421,124 @@ header::after {
   letter-spacing: -1px;
 }
 
+.testimonial {
+  padding: 364px 130px 109px 253px;
+}
+
+.testimonial .circuit1 {
+  position: absolute;
+  top: 150.5px;
+  left: -51px;
+}
+
+.testimonial .circuit2 {
+  position: absolute;
+  top: 150.5px;
+  right: 10px;
+}
+
+.testimonialContent {
+  gap: 16px;
+}
+
+.testimonialContentTitle {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 61.6px;
+  letter-spacing: -2.8px;
+  text-transform: uppercase;
+  background: radial-gradient(76.8% 77.27% at 47.05% 50%, #FFF 0%, rgba(255, 255, 255, 0.8) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testimonialContentSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+
+.testimonial .testimonialCards .card {
+  margin-top: 86px;
+}
+
+.testimonial .testimonialCards .card .quote {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 52px;
+}
+
+.testimonial .testimonialCards .card .stars {
+  width: 132px;
+}
+
+.testimonial .testimonialCards .cardText {
+  color: #FFFFFF;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -0.8px;
+}
+
+.testimonial .testimonialCards .cardFooter {
+  margin-top: 27px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardAuthor .avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  background: #A6D4C7;
+}
+
+.testimonial .testimonialCards .cardFooter .cardAuthorName {
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.18px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardAuthorStatus {
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardPagination {
+  gap: 67px;
+  width: 216px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardPaginationNumbers {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.48px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardPaginationButtons {
+  height: 34px;
+  gap: 42px;
+}
+
+.testimonial .testimonialCards .cardFooter .cardPagination .button-previous {
+  transform: scaleX(-1);
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1006,6 +1124,10 @@ video {
   flex-direction: column;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1028,6 +1150,14 @@ video {
 
 .gap-20{
   gap: 5rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .overflow-x-clip{

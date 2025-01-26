@@ -1,0 +1,127 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+// Le style qui compose la section testimonial
+.testimonial {
+    padding: 364px 130px 109px 253px;
+
+    .circuit1 {
+        position: absolute;
+        top: 150.5px;
+        left: -51px;
+    }
+
+    .circuit2 {
+        position: absolute;
+        top: 150.5px;
+        right: 10px;
+    }
+
+    &Content {
+        gap: 16px;
+
+        &Title {
+            font-size: $font-size-xxxl;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 61.6px;
+            letter-spacing: -2.8px;
+            text-transform: uppercase;
+            background: radial-gradient(76.8% 77.27% at 47.05% 50%, #FFF 0%, rgba(255, 255, 255, 0.80) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &Subtitle {
+            color: rgba(255, 255, 255, 0.80);
+            font-size: $font-size-xl;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 24px;
+            letter-spacing: -0.18px;
+        }
+    }
+
+    .testimonialCards {
+
+        .card {
+            margin-top: 86px;
+
+            .quote {
+                height: fit-content;
+                margin-top: 52px;
+            }
+
+            .stars {
+                width: 132px;
+            }
+
+            &Text {
+                color: $text-primary;
+                font-size: $font-size-xxl;
+                font-style: normal;
+                font-weight: $font-weight-regular;
+                line-height: 52px;
+                letter-spacing: -0.8px;
+            }
+
+            &Footer {
+                margin-top: 27px;
+
+                .cardAuthor {
+
+                    .avatar {
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 56px;
+                        background: #A6D4C7;
+                    }
+
+                    &Name {
+                        color: $text-primary;
+                        font-family: Inter;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 28px;
+                        letter-spacing: -0.18px;
+                    }
+
+                    &Status {
+                        color: $text-primary;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: -0.16px;
+                    }
+                }
+
+                .cardPagination {
+                    gap: 67px;
+                    width: 216px;
+
+                    &Numbers {
+                        color: $text-primary;
+                        font-size: $font-size-subtitle;
+                        font-weight: $font-weight-medium;
+                        line-height: 34px;
+                        letter-spacing: -0.48px;
+                    }
+
+                    &Buttons {
+                        height: 34px;
+                        gap: 42px;
+                    }
+
+                    .button-previous {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+
+        }
+    }
+}
