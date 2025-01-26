@@ -152,7 +152,7 @@ header::after {
   bottom: auto;
   left: auto;
   transform: none;
-  width: 1124px;
+  width: clamp(300px, 78vw, 1124px);
   height: 800px;
   z-index: -1;
   border-radius: 0;
@@ -223,7 +223,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 528px;
+  width: clamp(300px, 78vw, 528px);
   height: 936px;
   z-index: -2;
   border-radius: 0;
@@ -237,7 +237,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 528px;
+  width: clamp(300px, 78vw, 528px);
   height: 936px;
   z-index: -1;
   border-radius: 17px;
@@ -254,7 +254,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 50%);
-  width: 415px;
+  width: clamp(300px, 78vw, 415px);
   height: 360px;
   z-index: -2;
   border-radius: 0;
@@ -271,7 +271,7 @@ header::after {
   bottom: 0;
   left: 22%;
   transform: none;
-  width: 282px;
+  width: clamp(300px, 78vw, 282px);
   height: 256px;
   z-index: -1;
   border-radius: 0;
@@ -415,8 +415,12 @@ header::after {
   line-height: 24px;
   letter-spacing: -0.18px;
 }
+.testimonial .testimonialCards {
+  width: 1057px;
+}
 .testimonial .testimonialCards .card {
   margin-top: 86px;
+  width: 1057px;
 }
 .testimonial .testimonialCards .card .quote {
   height: -moz-fit-content;
@@ -461,22 +465,23 @@ header::after {
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.testimonial .testimonialCards .cardFooter .cardPagination {
+.testimonialPagination {
   gap: 67px;
   width: 216px;
+  bottom: 62px;
 }
-.testimonial .testimonialCards .cardFooter .cardPaginationNumbers {
+.testimonialPaginationNumbers {
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 500;
   line-height: 34px;
   letter-spacing: -0.48px;
 }
-.testimonial .testimonialCards .cardFooter .cardPaginationButtons {
+.testimonialPaginationButtons {
   height: 34px;
   gap: 42px;
 }
-.testimonial .testimonialCards .cardFooter .cardPagination .button-previous {
+.testimonialPagination .button-previous {
   transform: scaleX(-1);
 }
 

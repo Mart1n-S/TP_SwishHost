@@ -174,7 +174,7 @@ header::after {
   bottom: auto;
   left: auto;
   transform: none;
-  width: 1124px;
+  width: clamp(300px, 78vw, 1124px);
   height: 800px;
   z-index: -1;
   border-radius: 0;
@@ -250,7 +250,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 528px;
+  width: clamp(300px, 78vw, 528px);
   height: 936px;
   z-index: -2;
   border-radius: 0;
@@ -265,7 +265,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 528px;
+  width: clamp(300px, 78vw, 528px);
   height: 936px;
   z-index: -1;
   border-radius: 17px;
@@ -283,7 +283,7 @@ header::after {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 50%);
-  width: 415px;
+  width: clamp(300px, 78vw, 415px);
   height: 360px;
   z-index: -2;
   border-radius: 0;
@@ -301,7 +301,7 @@ header::after {
   bottom: 0;
   left: 22%;
   transform: none;
-  width: 282px;
+  width: clamp(300px, 78vw, 282px);
   height: 256px;
   z-index: -1;
   border-radius: 0;
@@ -463,8 +463,13 @@ header::after {
   letter-spacing: -0.18px;
 }
 
+.testimonial .testimonialCards {
+  width: 1057px;
+}
+
 .testimonial .testimonialCards .card {
   margin-top: 86px;
+  width: 1057px;
 }
 
 .testimonial .testimonialCards .card .quote {
@@ -517,12 +522,13 @@ header::after {
   letter-spacing: -0.16px;
 }
 
-.testimonial .testimonialCards .cardFooter .cardPagination {
+.testimonialPagination {
   gap: 67px;
   width: 216px;
+  bottom: 62px;
 }
 
-.testimonial .testimonialCards .cardFooter .cardPaginationNumbers {
+.testimonialPaginationNumbers {
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 500;
@@ -530,12 +536,12 @@ header::after {
   letter-spacing: -0.48px;
 }
 
-.testimonial .testimonialCards .cardFooter .cardPaginationButtons {
+.testimonialPaginationButtons {
   height: 34px;
   gap: 42px;
 }
 
-.testimonial .testimonialCards .cardFooter .cardPagination .button-previous {
+.testimonialPagination .button-previous {
   transform: scaleX(-1);
 }
 
@@ -1103,8 +1109,16 @@ video {
   position: relative;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .top-9{
   top: 2.25rem;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .flex{
@@ -1113,6 +1127,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.flex-shrink-0{
+  flex-shrink: 0;
 }
 
 .-translate-y-1\/2{
@@ -1160,6 +1178,10 @@ video {
   gap: 2rem;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .overflow-x-clip{
   overflow-x: clip;
 }
@@ -1177,6 +1199,20 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {

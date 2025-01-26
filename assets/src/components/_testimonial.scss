@@ -44,9 +44,12 @@
     }
 
     .testimonialCards {
+        width: 1057px;
 
         .card {
             margin-top: 86px;
+            width: 1057px;
+            // height: 375px;
 
             .quote {
                 height: fit-content;
@@ -98,30 +101,31 @@
                         letter-spacing: -0.16px;
                     }
                 }
-
-                .cardPagination {
-                    gap: 67px;
-                    width: 216px;
-
-                    &Numbers {
-                        color: $text-primary;
-                        font-size: $font-size-subtitle;
-                        font-weight: $font-weight-medium;
-                        line-height: 34px;
-                        letter-spacing: -0.48px;
-                    }
-
-                    &Buttons {
-                        height: 34px;
-                        gap: 42px;
-                    }
-
-                    .button-previous {
-                        transform: scaleX(-1);
-                    }
-                }
             }
 
+        }
+    }
+
+    &Pagination {
+        gap: 67px;
+        width: 216px;
+        bottom: 62px;
+
+        &Numbers {
+            color: $text-primary;
+            font-size: $font-size-subtitle;
+            font-weight: $font-weight-medium;
+            line-height: 34px;
+            letter-spacing: -0.48px;
+        }
+
+        &Buttons {
+            height: 34px;
+            gap: 42px;
+        }
+
+        .button-previous {
+            transform: scaleX(-1);
         }
     }
 }
