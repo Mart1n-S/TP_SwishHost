@@ -1,0 +1,93 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+// Le style qui compose la domain section
+.domain {
+    background-color: $bg-secondary;
+    padding: 120px 95px;
+
+    &Container {
+        gap: 41px;
+
+        &Title {
+            font-size: clamp(2rem, 10vw, $font-size-xxxl);
+            word-break: break-word;
+            width: 673px;
+            line-height: clamp(2rem, 10vw, 126px);
+            font-weight: $font-weight-medium;
+            letter-spacing: -3px;
+            line-height: 61.6px;
+            text-transform: uppercase;
+            background: $text-title;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &Form {
+            width: 534px;
+            height: 72px;
+
+            &Input {
+                position: relative;
+                bottom: -0.1px;
+                @include mixin.input($width: 534px,
+                    $height: 72px,
+                    $font-size: $font-size-xl,
+                    $font-weight: $font-weight-regular,
+                    $letter-spacing: normal,
+                    $outline: none,
+                    $padding: 0 0 0 20px,
+                    $bgColor: #21242A,
+                    $boxShadow: 12px 12px 54px 0px rgba(17, 17, 17, 0.05));
+            }
+
+            .button-primary {
+                right: 10px;
+                top: 36.5px;
+                @include mixin.button($background: $button-primary,
+                    $width: 157px,
+                    $height: 48px,
+                    $font-size: $font-size-sm,
+                    $font-weight: $font-weight-bold,
+                    $text-transform: none,
+                    $letter-spacing: normal,
+                    $outline: none,
+                    $line-height: normal);
+            }
+
+        }
+    }
+
+    &Grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 222.5px);
+        grid-gap: 8px;
+
+        .items {
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            gap: 9px;
+
+            &Title {
+                color: $text-primary;
+                text-align: center;
+                align-self: stretch;
+                font-size: $font-size-xxl;
+                font-weight: $font-weight-medium;
+                line-height: 44px;
+                letter-spacing: -2px;
+            }
+
+            &Subtitle {
+                color: $text-pink;
+                text-align: center;
+                font-size: $font-size-small;
+                font-weight: $font-weight-medium;
+                line-height: 22px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+}

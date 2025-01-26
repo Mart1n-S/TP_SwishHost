@@ -79,3 +79,27 @@
         background-repeat: $bgRepeat;
     }
 }
+
+// Mixin pour les inputs
+@mixin input($width,
+    $height,
+    $font-size,
+    $font-weight,
+    $letter-spacing,
+    $outline: none,
+    $line-height: normal,
+    $padding: inherit,
+    $bgColor,
+    $boxShadow: none) {
+    width: $width;
+    height: $height;
+    border-radius: 100px;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    outline: $outline;
+    line-height: $line-height;
+    padding: $padding;
+    background-color: $bgColor;
+    box-shadow: $boxShadow;
+}

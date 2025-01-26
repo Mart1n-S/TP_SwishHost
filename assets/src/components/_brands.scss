@@ -3,6 +3,8 @@
 // Le style qui compose la brands section
 .brands {
     margin-top: 223px;
+    height: 335px;
+    z-index: -1;
 
     .round-blur {
         position: absolute;
@@ -12,10 +14,12 @@
         background: rgba(55, 87, 142, 0.70);
         filter: blur(70.5px);
         transform: translate(40px, 0);
-        bottom: 43px;
+        bottom: 0;
     }
 
     &Content {
+        position: absolute;
+        bottom: -43px;
         width: 2001px;
         padding: 77px 0;
         height: 378px;
@@ -25,7 +29,7 @@
         clip-path: ellipse(50% 50% at 50% 50%);
 
         &Title {
-            font-size: clamp(2rem, 10vw, $font-size-xxl);
+            font-size: clamp(2rem, 10vw, $font-size-xxxl);
             text-align: center;
             word-break: break-word;
             width: 100%;
