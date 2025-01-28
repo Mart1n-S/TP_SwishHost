@@ -13,6 +13,28 @@ header {
             $outline: 1px solid #ffffff,
             $line-height: 11px,
             $padding: 17.5px 20px 16.5px 20px);
+
+        @media (min-width: 1920px) {
+            font-size: $font-size-subtitle;
+            letter-spacing: normal;
+            width: fit-content;
+            height: fit-content;
+            line-height: normal;
+            padding: 18px 24px;
+        }
+
+        @media (max-width: 768px) {
+            width: fit-content;
+            font-size: $font-size-xs;
+            padding: 15px 16px;
+        }
+
+        @media (max-width: 480px) {
+            width: fit-content;
+            font-size: 10px;
+            padding: 10px 12px;
+        }
+
     }
 
     .containerLogo {
@@ -23,6 +45,18 @@ header {
             position: relative;
             bottom: 0.5px;
             height: 38px;
+
+            @media (min-width: 1920px) {
+                height: 50px;
+            }
+
+            @media (max-width: 768px) {
+                height: 32px;
+            }
+
+            @media (max-width: 480px) {
+                height: 28px;
+            }
         }
 
         .logoTexte {
@@ -31,7 +65,18 @@ header {
             font-size: $font-size-md;
             font-weight: $font-weight-medium;
             letter-spacing: $spacing-small-md;
-            line-height: 38.39px;
+
+            @media (min-width: 1920px) {
+                font-size: $font-size-xxl;
+            }
+
+            @media (max-width: 768px) {
+                font-size: $font-size-sm;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $font-size-sm;
+            }
         }
     }
 
@@ -42,5 +87,25 @@ header {
         width: calc(100% - 163px);
         height: 1px;
         background-color: rgba(255, 255, 255, 0.1);
+
+        @media (min-width: 1920px) {
+            top: 120px;
+            width: calc(100% - 160px);
+        }
+
+        @media (max-width: 767px) {
+            top: 80px;
+            width: calc(100% - 80px);
+        }
+
+        @media (max-width: 640px) {
+            top: 80px;
+            width: calc(100% - 40px);
+        }
+
+        @media (max-width: 480px) {
+            top: 63px;
+            width: calc(100% - 40px);
+        }
     }
 }

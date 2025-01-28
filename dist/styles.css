@@ -33,6 +33,37 @@ header .button-header:active {
   background-color: rgba(0, 0, 0, 0);
 }
 
+@media (min-width: 1920px) {
+  header .button-header {
+    font-size: 24px;
+    letter-spacing: normal;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: normal;
+    padding: 18px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .button-header {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 12px;
+    padding: 15px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .button-header {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 10px;
+    padding: 10px 12px;
+  }
+}
+
 header .containerLogo {
   padding-left: 7px;
   gap: 17px;
@@ -44,13 +75,48 @@ header .containerLogo .logo {
   height: 38px;
 }
 
+@media (min-width: 1920px) {
+  header .containerLogo .logo {
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .containerLogo .logo {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .containerLogo .logo {
+    height: 28px;
+  }
+}
+
 header .containerLogo .logoTexte {
   position: relative;
   bottom: -0.5px;
   font-size: 26.9px;
   font-weight: 500;
   letter-spacing: -0.58px;
-  line-height: 38.39px;
+}
+
+@media (min-width: 1920px) {
+  header .containerLogo .logoTexte {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .containerLogo .logoTexte {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .containerLogo .logoTexte {
+    font-size: 16px;
+  }
 }
 
 header::after {
@@ -60,6 +126,34 @@ header::after {
   width: calc(100% - 163px);
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1920px) {
+  header::after {
+    top: 120px;
+    width: calc(100% - 160px);
+  }
+}
+
+@media (max-width: 767px) {
+  header::after {
+    top: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 640px) {
+  header::after {
+    top: 80px;
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  header::after {
+    top: 63px;
+    width: calc(100% - 40px);
+  }
 }
 
 .hero {
@@ -1480,14 +1574,14 @@ video {
   overflow-x: clip;
 }
 
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-white{
@@ -1510,10 +1604,59 @@ video {
 }
 
 body {
+  background-color: #0F1012;
+  color: #FFFFFF;
   font-family: "Inter", sans-serif;
   background-image: url("../assets/images/bg-test6.svg");
   background-size: 100%;
   background-position: top left;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1439px) {
+  body {
+    background-color: #0F1012;
+    background-image: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    background-color: #0F1012;
+    background-image: none;
+  }
+}
+
+@media (min-width: 640px){
+  .sm\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .sm\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
