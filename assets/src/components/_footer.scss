@@ -1,0 +1,240 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+footer {
+    padding: 54px 54px 40px;
+
+    .footerTop {
+        // padding-bottom: 48.5px;
+
+        .containerLogo {
+            padding-left: 8px;
+            gap: 20px;
+
+            .logo {
+                position: relative;
+                bottom: 1.5px;
+                height: 46.5px;
+            }
+
+            .logoTexte {
+                color: $text-primary;
+                font-size: $font-size-heading;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: 48.675px;
+                letter-spacing: -0.649px;
+            }
+        }
+
+        .text {
+            color: $text-primary;
+            font-size: $font-size-large;
+            font-style: normal;
+            font-weight: $font-weight-regular;
+            line-height: 44px;
+            letter-spacing: -0.64px;
+        }
+
+    }
+
+    hr.top {
+        margin: 47.5px 0 50px 0;
+        width: 100%;
+        height: 1px;
+        border: none;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .footerContent {
+        gap: 99px;
+
+        &Left {
+            width: 340px;
+            gap: 32.5px;
+
+            &Text {
+                color: #ffffffcc;
+                font-size: $font-size-xl;
+                font-style: normal;
+                font-weight: $font-weight-regular;
+                line-height: 27px;
+                letter-spacing: -0.36px;
+            }
+
+            &Link {
+                color: $text-primary;
+                font-size: $font-size-subtitle;
+                font-style: normal;
+                font-weight: $font-weight-regular;
+                line-height: 34px;
+                letter-spacing: -0.6px;
+                text-decoration: underline;
+                text-underline-offset: 12px;
+                text-decoration-thickness: 2px;
+            }
+        }
+
+        &Right {
+            width: 893px;
+            gap: 83px;
+
+            .title {
+                color: $text-primary;
+                font-size: $font-size-subtitle;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: 34px;
+                letter-spacing: -0.48px;
+            }
+
+            a {
+                color: #ffffffcc;
+                font-size: $font-size-subtitle;
+                font-style: normal;
+                font-weight: $font-weight-regular;
+                line-height: 32.4px;
+                letter-spacing: -0.6px;
+                white-space: nowrap;
+            }
+
+            .footerForm {
+                gap: 15px;
+
+                &Label {
+                    color: #ffffffcc;
+                    font-size: $font-size-subtitle;
+                    font-style: normal;
+                    font-weight: $font-weight-regular;
+                    line-height: 34px;
+                    letter-spacing: -0.4px;
+                }
+
+                &Input {
+                    position: relative;
+                    left: -0.5px;
+                    @include mixin.input($width: 368px,
+                        $height: 58px,
+                        $font-size: $font-size-small,
+                        $font-weight: $font-weight-regular,
+                        $letter-spacing: -0.4px,
+                        $outline: 1px solid #C9C9C9,
+                        $padding: 19px 18px 20px 19px,
+                        $bgColor: transparent,
+                        $boxShadow: none);
+
+                    &::placeholder {
+                        color: #B9B9B9;
+                    }
+                }
+
+                .button-secondary {
+                    right: 21.5px;
+                    top: 29.5px;
+                    @include mixin.button($background: transparent,
+                        $width: 16px,
+                        $height: 28px,
+                        $font-size: $font-size-sm,
+                        $font-weight: $font-weight-bold,
+                        $text-transform: none,
+                        $letter-spacing: normal,
+                        $outline: none,
+                        $line-height: normal);
+                }
+            }
+        }
+    }
+
+    hr.bottom {
+        margin: 74px 0 40.5px 0;
+        width: 100%;
+        height: 1px;
+        border: none;
+        background: rgba(255, 255, 255, 0.30);
+    }
+
+    .footerBottom {
+        &Text {
+            color: $text-primary;
+            font-size: $font-size-sm;
+            font-style: normal;
+            font-weight: $font-weight-regular;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+
+        &Links {
+            gap: 22.75px;
+
+            a {
+                color: $text-primary;
+                font-size: $font-size-sm;
+                font-style: normal;
+                font-weight: $font-weight-regular;
+                line-height: 19.2px;
+                letter-spacing: -0.32px;
+            }
+        }
+
+        &Socials {
+            gap: 26px
+        }
+    }
+
+    .squares {
+        @include mixin.rectangle($position: absolute,
+            $top: 0,
+            $left: 49.45%,
+            $transform: translate(-50%, 0),
+            $width: 528px,
+            $height: 100%,
+            $zIndex: -2);
+
+        &1 {
+            @include mixin.rectangle($position: absolute,
+                $top: 0,
+                $left: 50%,
+                $transform: translate(-50%, 0),
+                $width: 528px,
+                $height: 100%,
+                $bgImage: url('../assets/images/rectangle-violet.svg'),
+                $zIndex: -1,
+                $borderRadius: 17px 17px 0 0,
+                $backdropFilter: blur(62px));
+        }
+
+        &2 {
+            @include mixin.rectangle($position: relative,
+                $top: -105px,
+                $left: 50%,
+                $transform: translate(-50%, 50%),
+                $width: 415px,
+                $height: 360px,
+                $bgImage: url('../assets/images/cube-footer.svg'),
+                $zIndex: -2);
+        }
+
+        &3 {
+            @include mixin.rectangle($position: absolute,
+                $bottom: 0,
+                $left: 50%,
+                $transform: translate(-50%, 50%),
+                $width: 1105px,
+                $height: 450px,
+                $bgImage: url('../assets/images/illustration-footer-2.svg'),
+                $zIndex: -2);
+        }
+    }
+
+    .round-blur {
+        position: absolute;
+        width: 1596px;
+        height: 503px;
+        border-radius: 50%;
+        background: rgba(55, 87, 142, 0.70);
+        filter: blur(70.5px);
+        bottom: -358px;
+        left: -70px;
+        z-index: -2;
+    }
+}

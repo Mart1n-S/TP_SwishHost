@@ -5,6 +5,7 @@
 @use './components/_squares';
 @use './components/_domain';
 @use './components/_testimonial';
+@use './components/_footer';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 @tailwind base;
@@ -17,7 +18,7 @@ body {
     font-family: $font-family-primary;
 
     // Test pour le pixel perfect
-    background-image: url('../assets/images/bg-test5.svg');
+    background-image: url('../assets/images/bg-test6.svg');
     background-size: 100%;
     background-position: top left;
     background-repeat: no-repeat;

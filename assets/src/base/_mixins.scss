@@ -67,7 +67,7 @@
     left: $left;
     transform: $transform;
     // width: $width;
-    width: clamp(300px, 78vw, $width);
+    width: clamp(282px, 78vw, $width);
     height: $height;
     z-index: $zIndex;
     border-radius: $borderRadius;

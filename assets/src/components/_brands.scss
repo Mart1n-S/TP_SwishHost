@@ -15,6 +15,7 @@
         filter: blur(70.5px);
         transform: translate(40px, 0);
         bottom: 0;
+        z-index: -2;
     }
 
     &Content {
