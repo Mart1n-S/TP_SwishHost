@@ -138,6 +138,16 @@ header::after {
 .hero {
   margin-top: 87.5px;
 }
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 32px;
+  }
+}
 .heroTitle {
   font-size: clamp(2rem, 10vw, 140px);
   text-align: center;
@@ -152,9 +162,28 @@ header::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 1920px) {
+  .heroTitle {
+    font-size: 230px;
+    line-height: 240px;
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .heroTitle {
+    letter-spacing: normal;
+    width: clamp(200px, 80vw, 600px);
+  }
+}
 .heroContent {
   gap: 39.6px;
   width: clamp(320px, 50vw, 420px);
+}
+@media (min-width: 1920px) {
+  .heroContent {
+    width: 800px;
+    gap: 64px;
+  }
 }
 .heroContentText {
   color: rgba(255, 255, 255, 0.8);
@@ -162,6 +191,12 @@ header::after {
   font-weight: 400;
   font-size: clamp(14px, 5vw, 18px);
   line-height: clamp(18px, 6vw, 24px);
+}
+@media (min-width: 1920px) {
+  .heroContentText {
+    font-size: 32px;
+    line-height: normal;
+  }
 }
 .heroContentButtons {
   gap: 25px;
@@ -194,6 +229,29 @@ header::after {
 .heroContentButtons .button-primary:active {
   background-color: #ff1f1f;
 }
+@media (min-width: 1920px) {
+  .heroContentButtons .button-primary {
+    font-size: 32px;
+    letter-spacing: normal;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: normal;
+    padding: 24px 42px;
+  }
+}
+@media (max-width: 1024px) {
+  .heroContentButtons .button-primary {
+    padding: 12px 16px;
+    height: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .heroContentButtons .button-primary {
+    padding: 0;
+  }
+}
 .heroContentButtons .button-secondary {
   background-color: transparent;
   width: 192px;
@@ -223,9 +281,34 @@ header::after {
 .heroContentButtons .button-secondary:active {
   background-color: rgba(0, 0, 0, 0);
 }
+@media (min-width: 1920px) {
+  .heroContentButtons .button-secondary {
+    font-size: 32px;
+    letter-spacing: normal;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: normal;
+    padding: 24px 42px;
+  }
+}
+@media (max-width: 1024px) {
+  .heroContentButtons .button-secondary {
+    justify-content: space-around;
+    padding: 12px 0;
+    gap: 0;
+    height: 48px;
+  }
+}
 .heroContentButtons .button-secondary::before {
   content: url("../assets/images/ic_play.svg");
   position: relative;
+}
+@media (min-width: 1920px) {
+  .heroContentButtons .button-secondary::before {
+    transform: scale(1.5);
+  }
 }
 .heroContent .square {
   position: absolute;
@@ -241,15 +324,22 @@ header::after {
           backdrop-filter: none;
   background: rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 1920px) {
+  .heroContent .square {
+    width: 1800px;
+  }
+}
 .hero .circuit1 {
   position: absolute;
   left: 0;
   top: 241px;
+  z-index: -2;
 }
 .hero .circuit2 {
   position: absolute;
   right: 0;
   top: 355px;
+  z-index: -2;
 }
 
 .brands {
@@ -330,6 +420,17 @@ header::after {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+@media (min-width: 1920px) {
+  .squares1 {
+    width: 1000px;
+    height: 1500px;
+  }
+}
+@media (max-width: 768px) {
+  .squares1 {
+    background-size: auto;
+  }
+}
 .squares2 {
   position: relative;
   top: 95px;
@@ -347,6 +448,20 @@ header::after {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+@media (min-width: 1920px) {
+  .squares2 {
+    top: auto;
+    bottom: auto;
+    width: 520px;
+    height: inherit;
+  }
+}
+@media (max-width: 768px) {
+  .squares2 {
+    top: auto;
+    bottom: 64px;
+  }
+}
 .squares3 {
   position: absolute;
   top: -161px;
@@ -360,6 +475,22 @@ header::after {
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
   background: rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1920px) {
+  .squares3 {
+    left: auto;
+    width: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .squares3 {
+    left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .squares3 {
+    width: 225px;
+  }
 }
 
 .domain {
