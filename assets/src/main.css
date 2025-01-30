@@ -347,6 +347,11 @@ header::after {
   height: 335px;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .brands {
+    margin-top: 168px;
+  }
+}
 .brands .round-blur {
   position: absolute;
   width: 1596px;
@@ -370,6 +375,28 @@ header::after {
   -webkit-clip-path: ellipse(50% 50% at 50% 50%);
           clip-path: ellipse(50% 50% at 50% 50%);
 }
+@media (min-width: 1920px) {
+  .brandsContent {
+    width: 120%;
+    height: 110%;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .brandsContent {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 480px) {
+  .brandsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 12px;
+    width: 800px;
+  }
+}
 .brandsContentTitle {
   font-size: clamp(2rem, 10vw, 56px);
   text-align: center;
@@ -384,9 +411,67 @@ header::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 1920px) {
+  .brandsContentTitle {
+    font-size: 100px;
+    line-height: 100px;
+    width: 10 0%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .brandsContentTitle {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .brandsContentTitle {
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .brandsContentTitle {
+    font-size: 24px;
+    letter-spacing: normal;
+    width: clamp(200px, 80vw, 600px);
+  }
+}
 .brandsContentLogos {
   gap: 64.17px;
   margin-top: 6px;
+}
+@media (min-width: 1920px) {
+  .brandsContentLogos {
+    margin-top: 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .brandsContentLogos {
+    gap: 12px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .brandsContentLogos {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .brandsContentLogos {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .brandsContentLogos img {
+    width: 7%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .brandsContentLogos img {
+    width: 5%;
+  }
 }
 
 .squares {
@@ -490,6 +575,7 @@ header::after {
 @media (max-width: 768px) {
   .squares3 {
     width: 225px;
+    top: -100px;
   }
 }
 

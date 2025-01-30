@@ -6,6 +6,10 @@
     height: 335px;
     z-index: -1;
 
+    @media (max-width: 768px) {
+        margin-top: 168px;
+    }
+
     .round-blur {
         position: absolute;
         width: 1596px;
@@ -29,6 +33,25 @@
         background: $bg-tertiary;
         clip-path: ellipse(50% 50% at 50% 50%);
 
+        @media (min-width: 1920px) {
+            width: 120%;
+            height: 110%;
+        }
+
+        @media (min-width: 480px)and (max-width: 768px) {
+            padding: 24px 0;
+        }
+
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 12px;
+            width: 800px;
+        }
+
         &Title {
             font-size: clamp(2rem, 10vw, $font-size-xxxl);
             text-align: center;
@@ -42,11 +65,61 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @media (min-width: 1920px) {
+                font-size: 100px;
+                line-height: 100px;
+                width: 10 0%;
+            }
+
+            @media (min-width: 768px) and (max-width: 1439px) {
+                font-size: $font-size-large;
+            }
+
+            @media (max-width: 768px) {
+                font-size: $font-size-large;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $font-size-subtitle;
+                letter-spacing: normal;
+                width: clamp(200px, 80vw, 600px);
+            }
         }
 
         &Logos {
             gap: 64.17px;
             margin-top: 6px;
+
+            @media (min-width: 1920px) {
+                margin-top: 64px;
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                gap: 12px;
+            }
+
+            @media (min-width: 480px) and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            @media (max-width: 480px) {
+                display: grid;
+                gap: 32px;
+                grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+            }
+
+            img {
+                @media (min-width: 768px) and (max-width: 1439px) {
+                    width: 7%;
+                }
+
+                @media (min-width: 481px) and (max-width: 768px) {
+                    width: 5%;
+                }
+            }
         }
     }
 }
