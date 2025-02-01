@@ -436,41 +436,43 @@ header::after {
   }
 }
 .brandsContentLogos {
-  gap: 64.17px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: fit-content(100%);
+  align-items: center;
+  justify-content: center;
   margin-top: 6px;
+  grid-gap: 64.17px;
 }
 @media (min-width: 1920px) {
   .brandsContentLogos {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1300px) {
   .brandsContentLogos {
-    gap: 12px;
+    grid-gap: 32px;
+    grid-template-columns: repeat(5, fit-content(5%));
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .brandsContentLogos {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    grid-template-columns: repeat(2, 10%);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 32px;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .brandsContentLogos {
-    display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    grid-template-columns: repeat(2, 25%);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-rows: auto;
+    grid-gap: 15%;
   }
 }
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 1920px) {
   .brandsContentLogos img {
-    width: 7%;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .brandsContentLogos img {
-    width: 5%;
+    width: 250px;
   }
 }
 
