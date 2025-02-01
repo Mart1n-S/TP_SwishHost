@@ -4,13 +4,18 @@ const totalCards = cards.length;
 const carousel = document.getElementById("carousel");
 const numberElement = document.getElementById("number");
 
-// Largeur d'une carte
-const cardWidth = cards[0].offsetWidth; // Dynamique pour gérer différentes largeurs de cartes
+let cardWidth = cards[0].offsetWidth; // Initialiser la largeur d'une carte
 
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 
-// Initialiser le carrousel à la première carte
+// Mettre à jour la largeur des cartes dynamiquement lors du redimensionnement de l'écran
+window.addEventListener("resize", () => {
+  cardWidth = cards[0].offsetWidth; // Recalculer la largeur
+  updateCarousel(); // Réajuster la position du carrousel
+});
+
+// Initialiser le carrousel
 carousel.style.transform = `translateX(0px)`;
 numberElement.textContent = currentIndex + 1;
 
