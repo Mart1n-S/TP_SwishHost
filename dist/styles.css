@@ -1612,6 +1612,36 @@ footer .round-blur {
   z-index: -2;
 }
 
+#errorSection {
+  gap: 170px;
+}
+
+@media (min-width: 1920px) {
+  #errorSection .squares {
+    width: 50%;
+    height: 1100px;
+  }
+
+  #errorSection .squares .squares1 {
+    height: 100%;
+    width: 100%;
+  }
+
+  #errorSection .squares .squares2 {
+    transform: translate(-50%, 25%);
+  }
+}
+
+#brands {
+  margin-top: 271px;
+}
+
+#brands #content {
+  bottom: 0;
+  padding: 0;
+  clip-path: ellipse(53% 59% at 50% 70%);
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2180,6 +2210,10 @@ video {
   right: 0px;
 }
 
+.right-1{
+  right: 0.25rem;
+}
+
 .top-9{
   top: 2.25rem;
 }
@@ -2330,6 +2364,10 @@ body {
 
   .sm\:justify-start{
     justify-content: flex-start;
+  }
+
+  .sm\:justify-center{
+    justify-content: center;
   }
 
   .sm\:gap-11{

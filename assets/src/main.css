@@ -1413,6 +1413,33 @@ footer .round-blur {
   z-index: -2;
 }
 
+#errorSection {
+  gap: 170px;
+}
+@media (min-width: 1920px) {
+  #errorSection .squares {
+    width: 50%;
+    height: 1100px;
+  }
+  #errorSection .squares .squares1 {
+    height: 100%;
+    width: 100%;
+  }
+  #errorSection .squares .squares2 {
+    transform: translate(-50%, 25%);
+  }
+}
+
+#brands {
+  margin-top: 271px;
+}
+#brands #content {
+  bottom: 0;
+  padding: 0;
+  -webkit-clip-path: ellipse(53% 59% at 50% 70%);
+          clip-path: ellipse(53% 59% at 50% 70%);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
