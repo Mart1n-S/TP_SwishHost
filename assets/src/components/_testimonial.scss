@@ -5,16 +5,35 @@
 .testimonial {
     padding: 364px 130px 82px 253px;
 
+    @media (min-width: 1600px) {
+        padding: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 320px) and (max-width: 1439px) {
+        padding: 32px 16px;
+    }
+
     .circuit1 {
         position: absolute;
         top: 150.5px;
         left: -51px;
+
+        @media (min-width: 320px) and (max-width: 1439px) {
+            display: none;
+        }
     }
 
     .circuit2 {
         position: absolute;
         top: 150.5px;
         right: 10px;
+
+        @media (min-width: 320px) and (max-width: 1439px) {
+            display: none;
+        }
     }
 
     &Content {
@@ -31,6 +50,10 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @media (min-width: 1600px) {
+                width: 1500px;
+            }
         }
 
         &Subtitle {
@@ -40,24 +63,53 @@
             font-weight: $font-weight-medium;
             line-height: 24px;
             letter-spacing: -0.18px;
+
+            @media (min-width: 1600px) {
+                font-size: $font-size-subtitle;
+            }
         }
     }
 
     .testimonialCards {
         width: 1057px;
 
+        @media (min-width: 1600px) {
+            width: 1500px;
+        }
+
+        @media (min-width: 320px) and (max-width: 1439px) {
+            width: 100%;
+        }
+
         .card {
             margin-top: 86px;
             width: 1057px;
-            // height: 375px;
+
+            @media (min-width: 1600px) {
+                width: 1500px;
+            }
+
+            @media (min-width: 320px) and (max-width: 1439px) {
+                width: 100%;
+                margin-top: 32px;
+                flex-direction: column;
+            }
 
             .quote {
                 height: fit-content;
                 margin-top: 52px;
+
+                @media (min-width: 320px) and (max-width: 1439px) {
+                    display: none;
+                }
             }
 
             .stars {
                 width: 132px;
+
+                @media (min-width: 320px) and (max-width: 1439px) {
+                    width: 100px;
+                }
             }
 
             &Text {
@@ -67,6 +119,11 @@
                 font-weight: $font-weight-regular;
                 line-height: 52px;
                 letter-spacing: -0.8px;
+
+                @media (min-width: 320px) and (max-width: 1439px) {
+                    font-size: $font-size-sm;
+                    line-height: normal;
+                }
             }
 
             &Footer {
@@ -79,6 +136,11 @@
                         height: 56px;
                         border-radius: 56px;
                         background: #A6D4C7;
+
+                        @media (min-width: 320px) and (max-width: 1439px) {
+                            width: 30px;
+                            height: 30px;
+                        }
                     }
 
                     &Name {
@@ -89,6 +151,14 @@
                         font-weight: 500;
                         line-height: 28px;
                         letter-spacing: -0.18px;
+
+                        @media (min-width: 1600px) {
+                            font-size: $font-size-subtitle;
+                        }
+
+                        @media (min-width: 320px) and (max-width: 1439px) {
+                            font-size: $font-size-sm;
+                        }
                     }
 
                     &Status {
@@ -99,6 +169,15 @@
                         font-weight: 400;
                         line-height: 24px;
                         letter-spacing: -0.16px;
+
+                        @media (min-width: 1600px) {
+                            font-size: $font-size-subtitle;
+                        }
+
+                        @media (min-width: 320px) and (max-width: 1439px) {
+                            font-size: 14px;
+                        }
+
                     }
                 }
             }
@@ -107,9 +186,20 @@
     }
 
     &Pagination {
+        position: absolute;
         gap: 67px;
         width: 216px;
         bottom: 62px;
+
+        @media (min-width: 1600px) {
+            width: fit-content;
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            position: initial;
+            width: 100%;
+            justify-content: center;
+        }
 
         &Numbers {
             color: $text-primary;
@@ -117,15 +207,35 @@
             font-weight: $font-weight-medium;
             line-height: 34px;
             letter-spacing: -0.48px;
+
+            @media (min-width: 1600px) {
+                font-size: $font-size-large;
+            }
         }
 
         &Buttons {
             height: 34px;
             gap: 42px;
+
+            @media (min-width: 1600px) {
+                height: fit-content;
+            }
         }
 
         .button-previous {
             transform: scaleX(-1);
+
+            @media (min-width: 1600px) {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        .button-next {
+            @media (min-width: 1600px) {
+                height: 32px;
+                width: 32px;
+            }
         }
     }
 }

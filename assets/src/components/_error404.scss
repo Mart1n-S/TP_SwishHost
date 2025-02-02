@@ -1,0 +1,34 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mixin;
+
+// Le style qui compose la hero section de la page 404
+#errorSection {
+    gap: 170px;
+
+    @media (min-width: 1920px) {
+        .squares {
+            width: 50%;
+            height: 1100px;
+
+            .squares1 {
+                height: 100%;
+                width: 100%;
+            }
+
+            .squares2 {
+                transform: translate(-50%, 25%);
+            }
+        }
+    }
+}
+
+#brands {
+    margin-top: 271px;
+
+    #content {
+        bottom: 0;
+        padding: 0;
+        clip-path: ellipse(53% 59% at 50% 70%);
+        ;
+    }
+}

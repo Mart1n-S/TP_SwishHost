@@ -10,7 +10,7 @@
 
 <body>
     <!-- Header -->
-    <header class="flex items-center justify-between px-20 py-6">
+    <header class="flex items-center justify-between px-5 py-4 sm:px-10 md:px-20 lg:px-20 xl:px-20 sm:py-6">
         <div class="flex items-center containerLogo">
             <img src="./assets/images/logoSwishHost.svg" class="logo">
             <p class="logoTexte">SwishHost</p>
@@ -20,16 +20,17 @@
     <!-- Main -->
     <main>
         <!-- Hero section -->
-        <section class="flex flex-col items-center justify-center hero gap-11">
+        <section class="flex flex-col items-center justify-center gap-6 hero sm:gap-11">
             <h1 class="heroTitle">Business Hosting</h1>
 
-            <div class="relative flex flex-col items-center justify-center heroContent">
+            <div class="relative flex flex-col items-center justify-center px-4 sm:px-0 heroContent">
                 <p class="heroContentText">
                     Seamlessly optimize your business's online infrastructure with simplified cloud and web hosting
                     solutions tailored to
                     your needs.
                 </p>
-                <div class="flex items-center justify-start w-full heroContentButtons">
+                <div
+                    class="flex flex-col items-center w-full gap-6 heroContentButtons sm:flex-row sm:items-start sm:justify-start 2xl:flex-row 2xl:items-center 2xl:justify-center">
                     <button class="button-primary">Get Started Free</button>
                     <button class="flex items-center button-secondary">Watch A Demo</button>
                 </div>
@@ -48,7 +49,7 @@
             <div class="round-blur"></div>
             <div class="brandsContent">
                 <h2 class="brandsContentTitle">1300+ Big brands trust us</h2>
-                <div class="flex justify-center brandsContentLogos">
+                <div class="brandsContentLogos">
                     <img src="./assets/images/commandR.svg" alt="command+R">
                     <img src="./assets/images/layers.svg" alt="layers">
                     <img src="./assets/images/quotient.svg" alt="quotient">
@@ -60,13 +61,13 @@
 
         <!-- Domain section -->
         <section class="flex flex-col gap-20 domain">
-            <div class="flex items-center domainContainer">
+            <div class="flex flex-wrap items-center justify-between domainContainer">
                 <h2 class="domainContainerTitle">Find your perfect domain name</h2>
                 <form class="relative flex items-center domainContainerForm">
                     <input type="text" placeholder="Check your dream domain here"
                         class="text-white domainContainerFormInput" />
                     <button type="submit" class="absolute -translate-y-1/2 top-9 button-primary">
-                        Search domain
+
                     </button>
                 </form>
             </div>
@@ -302,7 +303,7 @@
                 </div>
 
                 <!-- Pagination buttons -->
-                <div class="absolute right-0 flex items-center testimonialPagination">
+                <div class="right-0 flex items-center testimonialPagination">
                     <p class="testimonialPaginationNumbers"><span id="number"></span> ⏤ 6</p>
                     <div class="flex testimonialPaginationButtons">
                         <button id="prev" type="button"><img src="./assets/images/arrow.svg" alt="Avis précèdent"
@@ -402,6 +403,7 @@
         <div class="round-blur"></div>
     </footer>
     <script src="./assets/js/app.js"></script>
+
 </body>
 
 </html>

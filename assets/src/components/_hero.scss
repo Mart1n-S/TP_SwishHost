@@ -5,6 +5,14 @@
 .hero {
     margin-top: 87.5px;
 
+    @media (max-width: 768px) {
+        margin-top: 64px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 32px;
+    }
+
     &Title {
         font-size: clamp(2rem, 10vw, $font-size-lg);
         text-align: center;
@@ -18,11 +26,29 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (min-width: 1920px) {
+            font-size: 230px;
+            line-height: 240px;
+            width: 80%;
+        }
+
+        @media (max-width: 768px) {
+            letter-spacing: normal;
+            width: clamp(200px, 80vw, 600px);
+        }
+
+
     }
 
     &Content {
         gap: 39.6px;
         width: clamp(320px, 50vw, 420px);
+
+        @media (min-width: 1920px) {
+            width: 800px;
+            gap: 64px;
+        }
 
         &Text {
             color: rgba(255, 255, 255, 0.80);
@@ -30,6 +56,11 @@
             font-weight: $font-weight-regular;
             font-size: clamp(14px, 5vw, $font-size-xl);
             line-height: clamp(18px, 6vw, 24px);
+
+            @media (min-width: 1920px) {
+                font-size: $font-size-large;
+                line-height: normal;
+            }
         }
 
         &Buttons {
@@ -45,6 +76,25 @@
                     $letter-spacing: 0.1px,
                     $outline: none,
                     $line-height: normal);
+
+                @media (min-width: 1920px) {
+                    font-size: $font-size-large;
+                    letter-spacing: normal;
+                    width: fit-content;
+                    height: fit-content;
+                    line-height: normal;
+                    padding: 24px 42px;
+                }
+
+                @media (max-width: 1024px) {
+                    padding: 12px 16px;
+                    height: 48px;
+                }
+
+                @media (max-width: 768px) {
+                    padding: 0;
+                }
+
             }
 
             .button-secondary {
@@ -59,11 +109,31 @@
                     $line-height: 10px,
                     $padding: 14px 19px,
                     $gap: 12.5px);
+
+                @media (min-width: 1920px) {
+                    font-size: $font-size-large;
+                    letter-spacing: normal;
+                    width: fit-content;
+                    height: fit-content;
+                    line-height: normal;
+                    padding: 24px 42px;
+                }
+
+                @media (max-width: 1024px) {
+                    justify-content: space-around;
+                    padding: 12px 0;
+                    gap: 0;
+                    height: 48px;
+                }
             }
 
             .button-secondary::before {
                 content: url('../assets/images/ic_play.svg');
                 position: relative;
+
+                @media (min-width: 1920px) {
+                    transform: scale(1.5);
+                }
             }
         }
 
@@ -74,6 +144,10 @@
                 $height: 800px,
                 $bgColor: rgba(0, 0, 0, 0.20),
                 $zIndex: -1);
+
+            @media (min-width: 1920px) {
+                width: 1800px;
+            }
         }
     }
 
@@ -81,12 +155,14 @@
         position: absolute;
         left: 0;
         top: 241px;
+        z-index: -2;
     }
 
     .circuit2 {
         position: absolute;
         right: 0;
         top: 355px;
+        z-index: -2;
     }
 
 }

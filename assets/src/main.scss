@@ -6,6 +6,7 @@
 @use './components/_domain';
 @use './components/_testimonial';
 @use './components/_footer';
+@use './components/_error404';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 @tailwind base;
@@ -13,8 +14,8 @@
 @tailwind utilities;
 
 body {
-    // background-color: $bg-primary;
-    // color: $text-primary;
+    background-color: $bg-primary;
+    color: $text-primary;
     font-family: $font-family-primary;
 
     // Test pour le pixel perfect
@@ -23,4 +24,14 @@ body {
     background-position: top left;
     background-repeat: no-repeat;
     // Test pour le pixel perfect
+
+    @media (max-width: 1439px) {
+        background-color: $bg-primary;
+        background-image: none;
+    }
+
+    @media (min-width: 1920px) {
+        background-color: $bg-primary;
+        background-image: none;
+    }
 }

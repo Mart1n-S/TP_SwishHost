@@ -22,6 +22,15 @@
             $zIndex: -1,
             $borderRadius: 17px,
             $backdropFilter: blur(62px));
+
+        @media (min-width: 1920px) {
+            width: 1000px;
+            height: 1500px;
+        }
+
+        @media (max-width: 768px) {
+            background-size: auto;
+        }
     }
 
     &2 {
@@ -33,6 +42,18 @@
             $height: 360px,
             $bgImage: url('../assets/images/diamond.svg'),
             $zIndex: -2);
+
+        @media (min-width: 1920px) {
+            top: auto;
+            bottom: auto;
+            width: 520px;
+            height: inherit;
+        }
+
+        @media (max-width: 768px) {
+            top: auto;
+            bottom: 64px;
+        }
     }
 
     &3 {
@@ -43,5 +64,19 @@
             $height: 256px,
             $bgColor: rgba(0, 0, 0, 0.20),
             $zIndex: -1);
+
+        @media (min-width: 1920px) {
+            left: auto;
+            width: 400px;
+        }
+
+        @media (max-width: 1024px) {
+            left: auto;
+        }
+
+        @media (max-width: 768px) {
+            width: 225px;
+            top: -100px;
+        }
     }
 }
