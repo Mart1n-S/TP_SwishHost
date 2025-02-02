@@ -4,17 +4,31 @@
 footer {
     padding: 54px 54px 40px;
 
+    @media (min-width: 320px) and (max-width: 767px) {
+        padding: 32px 16px;
+    }
+
     .footerTop {
-        // padding-bottom: 48.5px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            flex-direction: column;
+        }
 
         .containerLogo {
             padding-left: 8px;
             gap: 20px;
 
+            @media (min-width: 320px) and (max-width: 767px) {
+                padding: 0;
+            }
+
             .logo {
                 position: relative;
                 bottom: 1.5px;
                 height: 46.5px;
+
+                @media (min-width: 320px) and (max-width: 767px) {
+                    height: 28px;
+                }
             }
 
             .logoTexte {
@@ -24,6 +38,10 @@ footer {
                 font-weight: $font-weight-medium;
                 line-height: 48.675px;
                 letter-spacing: -0.649px;
+
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: $font-size-subtitle;
+                }
             }
         }
 
@@ -34,6 +52,10 @@ footer {
             font-weight: $font-weight-regular;
             line-height: 44px;
             letter-spacing: -0.64px;
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                font-size: $font-size-sm;
+            }
         }
 
     }
@@ -49,9 +71,23 @@ footer {
     .footerContent {
         gap: 99px;
 
+        @media (min-width: 1600px) {
+            justify-content: space-between;
+        }
+
+        @media (min-width: 320px) and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 32px;
+        }
+
         &Left {
             width: 340px;
             gap: 32.5px;
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                width: 100%;
+                gap: 12px;
+            }
 
             &Text {
                 color: #ffffffcc;
@@ -60,6 +96,10 @@ footer {
                 font-weight: $font-weight-regular;
                 line-height: 27px;
                 letter-spacing: -0.36px;
+
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: $font-size-sm;
+                }
             }
 
             &Link {
@@ -72,12 +112,28 @@ footer {
                 text-decoration: underline;
                 text-underline-offset: 12px;
                 text-decoration-thickness: 2px;
+
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: $font-size-sm;
+                }
             }
         }
 
         &Right {
             width: 893px;
             gap: 83px;
+
+            @media (min-width: 767px) and (max-width: 1200px) {
+                width: 100%;
+                justify-content: space-between;
+                gap: 12px;
+            }
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                flex-direction: column;
+                gap: 32px;
+                width: 100%;
+            }
 
             .title {
                 color: $text-primary;
@@ -86,6 +142,16 @@ footer {
                 font-weight: $font-weight-medium;
                 line-height: 34px;
                 letter-spacing: -0.48px;
+
+                @media (min-width: 320px) and (max-width: 1024px) {
+                    font-size: $font-size-xl;
+                }
+            }
+
+            ul {
+                @media (min-width: 320px) and (max-width: 1024px) {
+                    gap: 0px;
+                }
             }
 
             a {
@@ -96,6 +162,10 @@ footer {
                 line-height: 32.4px;
                 letter-spacing: -0.6px;
                 white-space: nowrap;
+
+                @media (min-width: 320px) and (max-width: 1024px) {
+                    font-size: $font-size-sm;
+                }
             }
 
             .footerForm {
@@ -108,6 +178,10 @@ footer {
                     font-weight: $font-weight-regular;
                     line-height: 34px;
                     letter-spacing: -0.4px;
+
+                    @media (min-width: 320px) and (max-width: 1024px) {
+                        font-size: $font-size-xl;
+                    }
                 }
 
                 &Input {
@@ -125,6 +199,15 @@ footer {
 
                     &::placeholder {
                         color: #B9B9B9;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        font-size: $font-size-xl;
+                    }
+
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        width: 100%;
+                        font-size: $font-size-sm;
                     }
                 }
 
@@ -154,6 +237,11 @@ footer {
     }
 
     .footerBottom {
+        @media (min-width: 320px) and (max-width: 767px) {
+            flex-direction: column;
+            gap: 32px;
+        }
+
         &Text {
             color: $text-primary;
             font-size: $font-size-sm;
@@ -161,10 +249,18 @@ footer {
             font-weight: $font-weight-regular;
             line-height: normal;
             letter-spacing: 0.1px;
+
+            @media (min-width: 1600px) {
+                font-size: $font-size-subtitle;
+            }
         }
 
         &Links {
             gap: 22.75px;
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                gap: 12px;
+            }
 
             a {
                 color: $text-primary;
@@ -173,11 +269,21 @@ footer {
                 font-weight: $font-weight-regular;
                 line-height: 19.2px;
                 letter-spacing: -0.32px;
+
+                @media (min-width: 1600px) {
+                    font-size: $font-size-subtitle;
+                }
             }
         }
 
         &Socials {
-            gap: 26px
+            gap: 26px;
+
+            img {
+                @media (min-width: 1600px) {
+                    width: 30px;
+                }
+            }
         }
     }
 
@@ -190,6 +296,15 @@ footer {
             $height: 100%,
             $zIndex: -2);
 
+        @media (min-width: 1600px) {
+            left: 50%;
+            width: 1000px;
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            width: 500px;
+        }
+
         &1 {
             @include mixin.rectangle($position: absolute,
                 $top: 0,
@@ -201,6 +316,14 @@ footer {
                 $zIndex: -1,
                 $borderRadius: 17px 17px 0 0,
                 $backdropFilter: blur(62px));
+
+            @media (min-width: 1600px) {
+                width: 100%;
+            }
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                background-size: 800px;
+            }
         }
 
         &2 {

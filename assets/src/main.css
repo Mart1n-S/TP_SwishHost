@@ -1017,14 +1017,34 @@ header::after {
 footer {
   padding: 54px 54px 40px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  footer {
+    padding: 32px 16px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerTop {
+    flex-direction: column;
+  }
+}
 footer .footerTop .containerLogo {
   padding-left: 8px;
   gap: 20px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerTop .containerLogo {
+    padding: 0;
+  }
 }
 footer .footerTop .containerLogo .logo {
   position: relative;
   bottom: 1.5px;
   height: 46.5px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerTop .containerLogo .logo {
+    height: 28px;
+  }
 }
 footer .footerTop .containerLogo .logoTexte {
   color: #FFFFFF;
@@ -1034,6 +1054,11 @@ footer .footerTop .containerLogo .logoTexte {
   line-height: 48.675px;
   letter-spacing: -0.649px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerTop .containerLogo .logoTexte {
+    font-size: 24px;
+  }
+}
 footer .footerTop .text {
   color: #FFFFFF;
   font-size: 32px;
@@ -1041,6 +1066,11 @@ footer .footerTop .text {
   font-weight: 400;
   line-height: 44px;
   letter-spacing: -0.64px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerTop .text {
+    font-size: 16px;
+  }
 }
 footer hr.top {
   margin: 47.5px 0 50px 0;
@@ -1052,9 +1082,26 @@ footer hr.top {
 footer .footerContent {
   gap: 99px;
 }
+@media (min-width: 1600px) {
+  footer .footerContent {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  footer .footerContent {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 footer .footerContentLeft {
   width: 340px;
   gap: 32.5px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerContentLeft {
+    width: 100%;
+    gap: 12px;
+  }
 }
 footer .footerContentLeftText {
   color: rgba(255, 255, 255, 0.8);
@@ -1063,6 +1110,11 @@ footer .footerContentLeftText {
   font-weight: 400;
   line-height: 27px;
   letter-spacing: -0.36px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerContentLeftText {
+    font-size: 16px;
+  }
 }
 footer .footerContentLeftLink {
   color: #FFFFFF;
@@ -1075,9 +1127,28 @@ footer .footerContentLeftLink {
   text-underline-offset: 12px;
   text-decoration-thickness: 2px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerContentLeftLink {
+    font-size: 16px;
+  }
+}
 footer .footerContentRight {
   width: 893px;
   gap: 83px;
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+  footer .footerContentRight {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerContentRight {
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
 }
 footer .footerContentRight .title {
   color: #FFFFFF;
@@ -1087,6 +1158,16 @@ footer .footerContentRight .title {
   line-height: 34px;
   letter-spacing: -0.48px;
 }
+@media (min-width: 320px) and (max-width: 1024px) {
+  footer .footerContentRight .title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  footer .footerContentRight ul {
+    gap: 0px;
+  }
+}
 footer .footerContentRight a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
@@ -1095,6 +1176,11 @@ footer .footerContentRight a {
   line-height: 32.4px;
   letter-spacing: -0.6px;
   white-space: nowrap;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  footer .footerContentRight a {
+    font-size: 16px;
+  }
 }
 footer .footerContentRight .footerForm {
   gap: 15px;
@@ -1106,6 +1192,11 @@ footer .footerContentRight .footerFormLabel {
   font-weight: 400;
   line-height: 34px;
   letter-spacing: -0.4px;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  footer .footerContentRight .footerFormLabel {
+    font-size: 18px;
+  }
 }
 footer .footerContentRight .footerFormInput {
   position: relative;
@@ -1127,6 +1218,17 @@ footer .footerContentRight .footerFormInput::-moz-placeholder {
 }
 footer .footerContentRight .footerFormInput::placeholder {
   color: #B9B9B9;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer .footerContentRight .footerFormInput {
+    font-size: 18px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerContentRight .footerFormInput {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 footer .footerContentRight .footerForm .button-secondary {
   right: 21.5px;
@@ -1165,6 +1267,12 @@ footer hr.bottom {
   border: none;
   background: rgba(255, 255, 255, 0.3);
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerBottom {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 footer .footerBottomText {
   color: #FFFFFF;
   font-size: 16px;
@@ -1173,8 +1281,18 @@ footer .footerBottomText {
   line-height: normal;
   letter-spacing: 0.1px;
 }
+@media (min-width: 1600px) {
+  footer .footerBottomText {
+    font-size: 24px;
+  }
+}
 footer .footerBottomLinks {
   gap: 22.75px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .footerBottomLinks {
+    gap: 12px;
+  }
 }
 footer .footerBottomLinks a {
   color: #FFFFFF;
@@ -1184,8 +1302,18 @@ footer .footerBottomLinks a {
   line-height: 19.2px;
   letter-spacing: -0.32px;
 }
+@media (min-width: 1600px) {
+  footer .footerBottomLinks a {
+    font-size: 24px;
+  }
+}
 footer .footerBottomSocials {
   gap: 26px;
+}
+@media (min-width: 1600px) {
+  footer .footerBottomSocials img {
+    width: 30px;
+  }
 }
 footer .squares {
   position: absolute;
@@ -1200,6 +1328,17 @@ footer .squares {
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
   background: transparent;
+}
+@media (min-width: 1600px) {
+  footer .squares {
+    left: 50%;
+    width: 1000px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .squares {
+    width: 500px;
+  }
 }
 footer .squares1 {
   position: absolute;
@@ -1217,6 +1356,16 @@ footer .squares1 {
   background-image: url("../assets/images/rectangle-violet.svg");
   background-size: 100%;
   background-repeat: no-repeat;
+}
+@media (min-width: 1600px) {
+  footer .squares1 {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer .squares1 {
+    background-size: 800px;
+  }
 }
 footer .squares2 {
   position: relative;
