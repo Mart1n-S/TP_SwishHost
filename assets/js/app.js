@@ -39,3 +39,35 @@ function updateCarousel() {
   // Mettre à jour le numéro affiché
   numberElement.textContent = currentIndex + 1;
 }
+
+// Gestion de la modal
+// Récupérer les éléments de la modal
+const openModalButton = document.getElementById("openModal");
+const modal = document.getElementById("modal");
+const closeModalButton = document.getElementById("closeModal");
+const iframe = document.getElementById("videoIframe");
+
+// Lorsque le bouton est cliqué, ouvrir la modal
+openModalButton.addEventListener("click", () => {
+  iframe.src =
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&si=aLR4x5sCBzHXw9gs";
+  modal.classList.remove("hidden");
+});
+
+// Lorsque le bouton de fermeture est cliqué, fermer la modal
+closeModalButton.addEventListener("click", () => {
+  modal.classList.add("hidden");
+
+  // Réinitialiser l'iframe pour arrêter la vidéo
+  iframe.src = "";
+});
+
+// Fermer la modal en cliquant en dehors de la modal (sur l'overlay)
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.add("hidden");
+
+    // Réinitialiser l'iframe pour arrêter la vidéo
+    iframe.src = "";
+  }
+});
