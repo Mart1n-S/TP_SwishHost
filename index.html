@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwishHost</title>
     <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <meta name="description"
+        content="Seamlessly optimize your business's online infrastructure with simplified cloud and web hosting solutions, tailored to meet your specific needs.">
 </head>
 
 <body>
     <!-- Header -->
     <header class="flex items-center justify-between px-5 py-4 sm:px-10 md:px-20 lg:px-20 xl:px-20 sm:py-6">
         <div class="flex items-center containerLogo">
-            <img src="./assets/images/logoSwishHost.svg" class="logo">
+            <!-- Pour l'accessibilité, puisque l'image n'est pas porteuse d'information, on met un alt vide -->
+            <img src="./assets/images/logoSwishHost.svg" class="logo" alt="">
             <p class="logoTexte">SwishHost</p>
         </div>
-        <button class="button-header">Start for free</button>
+        <button class="button-header" onclick="window.location.href='404.html'">Start for free</button>
     </header>
     <!-- Main -->
     <main>
@@ -31,13 +36,13 @@
                 </p>
                 <div
                     class="flex flex-col items-center w-full gap-6 heroContentButtons sm:flex-row sm:items-start sm:justify-start 2xl:flex-row 2xl:items-center 2xl:justify-center">
-                    <button class="button-primary">Get Started Free</button>
+                    <button class="button-primary" onclick="window.location.href='404.html'">Get Started Free</button>
                     <button class="flex items-center button-secondary">Watch A Demo</button>
                 </div>
                 <div class="square"></div>
             </div>
-            <img src="./assets/images/circuit1.svg" class="circuit1">
-            <img src="./assets/images/circuit2.svg" class="circuit2">
+            <img src="./assets/images/circuit1.svg" class="circuit1" alt="">
+            <img src="./assets/images/circuit2.svg" class="circuit2" alt="">
             <div class="squares">
                 <div class="squares1"></div>
                 <div class="squares2"></div>
@@ -63,10 +68,11 @@
         <section class="flex flex-col gap-20 domain">
             <div class="flex flex-wrap items-center justify-between domainContainer">
                 <h2 class="domainContainerTitle">Find your perfect domain name</h2>
-                <form class="relative flex items-center domainContainerForm">
-                    <input type="text" placeholder="Check your dream domain here"
-                        class="text-white domainContainerFormInput" />
-                    <button type="submit" class="absolute -translate-y-1/2 top-9 button-primary">
+                <form class="relative flex items-center domainContainerForm" action="404.html" method="GET">
+                    <input type="text" placeholder="Check your dream domain here" name="domain" id="domain"
+                        class="text-white domainContainerFormInput" autocomplete="off" />
+                    <button type="submit" class="absolute -translate-y-1/2 top-9 button-primary"
+                        aria-label="Search Domain">
 
                     </button>
                 </form>
@@ -152,8 +158,8 @@
         <!-- Testimonial section -->
         <section class="relative testimonial">
             <!-- Images circuit imprimés pour le background -->
-            <img src="./assets/images/circuit1.svg" class="circuit1">
-            <img src="./assets/images/circuit3.svg" class="circuit2">
+            <img src="./assets/images/circuit1.svg" class="circuit1" alt="">
+            <img src="./assets/images/circuit3.svg" class="circuit2" alt="">
             <div class="flex flex-col testimonialContent">
                 <h2 class="testimonialContentTitle">What our clients said</h2>
                 <p class="testimonialContentSubtitle">Risus viverra justo sagittis vestibulum metus.</p>
@@ -163,9 +169,9 @@
                 <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
                     <!-- Card 1 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 SwiftServerHub has been fantastic for my business website. It's fast, reliable, and the
                                 customer
@@ -186,9 +192,9 @@
 
                     <!-- Card 2 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 SwiftServerHub has been a game-changer for my online store. The hosting is incredibly
                                 reliable, and their support team
@@ -209,9 +215,9 @@
 
                     <!-- Card 3 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 I couldn't be happier with SwiftServerHub's services. Their speed and uptime are
                                 amazing,
@@ -233,9 +239,9 @@
 
                     <!-- Card 4 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 SwiftServerHub has exceeded my expectations. The hosting is fast, secure, and their
                                 customer
@@ -257,9 +263,9 @@
 
                     <!-- Card 5 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 Choosing SwiftServerHub was the best decision for my business. Their servers are
                                 lightning-fast, and the reliability is
@@ -281,9 +287,9 @@
 
                     <!-- Card 6 -->
                     <div class="flex flex-shrink-0 gap-6 card">
-                        <img src="./assets/images/quote.svg" class="quote">
+                        <img src="./assets/images/quote.svg" class="quote" alt="">
                         <div class="flex flex-col gap-8">
-                            <img src="./assets/images/etoiles.svg" class="stars">
+                            <img src="./assets/images/etoiles.svg" class="stars" alt="Five stars">
                             <p class="cardText">
                                 With SwiftServerHub, my website has never run smoother. The performance and uptime are
                                 outstanding, and the support team
@@ -306,10 +312,10 @@
                 <div class="right-0 flex items-center testimonialPagination">
                     <p class="testimonialPaginationNumbers"><span id="number"></span> ⏤ 6</p>
                     <div class="flex testimonialPaginationButtons">
-                        <button id="prev" type="button"><img src="./assets/images/arrow.svg" alt="Avis précèdent"
-                                class="button-previous"></button>
-                        <button id="next" type="button"><img src="./assets/images/arrow.svg" alt="Avis suivant"
-                                class="button-next"></button>
+                        <button id="prev" type="button" aria-label="Previous"><img src="./assets/images/arrow.svg"
+                                alt="Avis précèdent" class="button-previous" alt=""></button>
+                        <button id="next" type="button" aria-label="Next"><img src="./assets/images/arrow.svg"
+                                alt="Avis suivant" class="button-next" alt=""></button>
                     </div>
                 </div>
             </div>
@@ -320,7 +326,7 @@
     <footer class="relative overflow-clip">
         <div class="relative flex flex-row items-center justify-between footerTop">
             <div class="flex items-center containerLogo">
-                <img src="./assets/images/logoSwishHost.svg" class="logo">
+                <img src="./assets/images/logoSwishHost.svg" class="logo" alt="">
                 <p class="logoTexte">SwishHost</p>
             </div>
             <p class="text">support@depower.com</p>
@@ -332,39 +338,41 @@
                     Digital Experiences that Foster
                     Happiness and Make a
                     Positive Impact on the World.</p>
-                <a href="" class="footerContentLeftLink">Learn more</a>
+                <a href="404.html?research=Learn%20More" class="footerContentLeftLink">Learn more</a>
             </div>
 
             <div class="flex flex-row footerContentRight">
                 <div class="flex flex-col gap-6">
                     <p class="title">Navigations</p>
                     <ul class="flex flex-col gap-4">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Why our network</a></li>
-                        <li><a href="">Charging solutions</a></li>
-                        <li><a href="">Technology</a></li>
-                        <li><a href="">Contact us</a></li>
+                        <li><a href="404.html?research=Home">Home</a></li>
+                        <li><a href="404.html?research=Why%20our%20network">Why our network</a></li>
+                        <li><a href="404.html?research=Charging%20solutions">Charging solutions</a></li>
+                        <li><a href="404.html?research=Technology">Technology</a></li>
+                        <li><a href="404.html?research=Contact%20us">Contact us</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-6">
                     <p class="title">About us</p>
                     <ul class="flex flex-col gap-4">
-                        <li><a href="">Our company</a></li>
-                        <li><a href="">Our mission</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Press releases</a></li>
+                        <li><a href="404.html?research=Our%20company">Our company</a></li>
+                        <li><a href="404.html?research=Our%20mission">Our mission</a></li>
+                        <li><a href="404.html?research=Careers">Careers</a></li>
+                        <li><a href="404.html?research=Blog">Blog</a></li>
+                        <li><a href="404.html?research=Press%20releases">Press releases</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-6">
                     <p class="title">Subscribe newsletter</p>
-                    <form class="flex flex-col items-center footerForm">
-                        <label for="" class="footerFormLabel">Stay updated with the latest news and offers!</label>
+                    <form class="flex flex-col items-center footerForm" action="404.html" method="GET">
+                        <label for="email" class="footerFormLabel">Stay updated with the latest news and offers!</label>
                         <div class="relative">
-                            <input type="text" placeholder="Email adress" class="text-white footerFormInput" />
-                            <button type="submit" class="absolute -translate-y-1/2 top-9 button-secondary">
+                            <input type="email" name="email" id="email" placeholder="Email adress"
+                                class="text-white footerFormInput" autocomplete="off" />
+                            <button type="submit" class="absolute -translate-y-1/2 top-9 button-secondary"
+                                aria-label="Subscribe newsletter">
                                 <img src="./assets/images/arrow.svg" alt="Send" class="button-next">
                             </button>
                         </div>
@@ -381,18 +389,22 @@
             <p class="footerBottomText">©SwishHost by Sans Brothers</p>
 
             <div class="flex flex-row footerBottomLinks">
-                <a href="">Terms</a>
-                <a href="">Privacy</a>
-                <a href="">Cookies</a>
-                <a href="">Legal</a>
-                <a href="">Recalls</a>
+                <a href="404.html?research=Terms">Terms</a>
+                <a href="404.html?research=Privacy">Privacy</a>
+                <a href="404.html?research=Cookies">Cookies</a>
+                <a href="404.html?research=Legal">Legal</a>
+                <a href="404.html?research=Recalls">Recalls</a>
             </div>
 
             <div class="flex flex-row footerBottomSocials">
-                <img src="./assets/images/instagram.svg" alt="instagram">
-                <img src="./assets/images/facebook.svg" alt="facebook">
-                <img src="./assets/images/youtube.svg" alt="youtube">
-                <img src="./assets/images/tiktok.svg" alt="tiktok">
+                <img src="./assets/images/instagram.svg" alt="instagram"
+                    onclick="window.location.href='404.html?research=Instagram'">
+                <img src="./assets/images/facebook.svg" alt="facebook"
+                    onclick="window.location.href='404.html?research=Facebook'">
+                <img src="./assets/images/youtube.svg" alt="youtube"
+                    onclick="window.location.href='404.html?research=Youtube'">
+                <img src="./assets/images/tiktok.svg" alt="tiktok"
+                    onclick="window.location.href='404.html?research=Tiktok'">
             </div>
         </div>
         <div class="overflow-hidden squares">

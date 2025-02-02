@@ -6,6 +6,10 @@
     gap: 170px;
 
     @media (min-width: 1920px) {
+        #researchText {
+            font-size: $font-size-large;
+        }
+
         .squares {
             width: 50%;
             height: 1100px;

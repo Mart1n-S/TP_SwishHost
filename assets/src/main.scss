@@ -17,21 +17,4 @@ body {
     background-color: $bg-primary;
     color: $text-primary;
     font-family: $font-family-primary;
-
-    // Test pour le pixel perfect
-    background-image: url('../assets/images/bg-test6.svg');
-    background-size: 100%;
-    background-position: top left;
-    background-repeat: no-repeat;
-    // Test pour le pixel perfect
-
-    @media (max-width: 1439px) {
-        background-color: $bg-primary;
-        background-image: none;
-    }
-
-    @media (min-width: 1920px) {
-        background-color: $bg-primary;
-        background-image: none;
-    }
 }

@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error 404</title>
     <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <meta name="description"
+        content="Seamlessly optimize your business's online infrastructure with simplified cloud and web hosting solutions, tailored to meet your specific needs.">
 </head>
 
 <body>
     <!-- Header -->
     <header class="flex items-center justify-between px-5 py-4 sm:px-10 md:px-20 lg:px-20 xl:px-20 sm:py-6">
         <div class="flex items-center containerLogo">
-            <img src="./assets/images/logoSwishHost.svg" class="logo">
-            <p class="logoTexte">SwishHost</p>
+            <img src="./assets/images/logoSwishHost.svg" class="logo" alt="">
+            <p class=" logoTexte">SwishHost</p>
         </div>
-        <button class="button-header">Start for free</button>
+        <button class="button-header" onclick="window.location.href='404.html'">Start for free</button>
     </header>
     <!-- Main -->
     <main>
@@ -24,16 +28,17 @@
             <h1 class="relative heroTitle right-1">404</h1>
 
             <div class="relative flex flex-col items-center justify-center px-4 sm:px-0 heroContent">
+                <p id="researchText"></p>
                 <p class="heroContentText">
                     Not Found
                 </p>
                 <div
                     class="flex flex-col items-center justify-center w-full gap-6 heroContentButtons sm:flex-row sm:items-start sm:justify-center 2xl:flex-row 2xl:items-center 2xl:justify-center">
-                    <button class="button-primary">Back Home</button>
+                    <button class="button-primary" onclick="window.location.href='index.html'">Back Home</button>
                 </div>
             </div>
-            <img src="./assets/images/circuit1.svg" class="circuit1">
-            <img src="./assets/images/circuit2.svg" class="circuit2">
+            <img src="./assets/images/circuit1.svg" class="circuit1" alt="">
+            <img src="./assets/images/circuit2.svg" class="circuit2" alt="">
             <div class="squares">
                 <div class="squares1"></div>
                 <div class="squares2"></div>
@@ -49,7 +54,7 @@
 
     </main>
 
-
+    <script src="./assets/js/404.js"></script>
 </body>
 
 </html>
