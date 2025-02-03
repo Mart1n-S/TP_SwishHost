@@ -1,32 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 header .button-header {
-  background-color: transparent;
   width: 143px;
   height: -moz-min-content;
   height: min-content;
   font-size: 12px;
   font-weight: 500;
-  color: white;
-  text-align: center;
-  border-radius: 100px;
-  outline: 1px solid #ffffff;
-  cursor: pointer;
   text-transform: uppercase;
   line-height: 11px;
   letter-spacing: -0.24px;
   padding: 17.5px 20px 16.5px 20px;
   gap: initial;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  outline: 1px solid #ffffff;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-}
-header .button-header:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: white;
 }
+header .button-header:hover {
+  background-color: white;
+  color: black;
+}
 header .button-header:focus {
-  outline-offset: 2px;
+  box-shadow: 0 0 10px white;
 }
 header .button-header:active {
-  background-color: rgba(0, 0, 0, 0);
+  outline-color: #e6e6e6;
+  color: black;
 }
 @media (min-width: 1920px) {
   header .button-header {
@@ -202,32 +203,33 @@ header::after {
   gap: 25px;
 }
 .heroContentButtons .button-primary {
-  background-color: #FF6B6B;
   width: 194px;
   height: 54px;
   font-size: 16px;
   font-weight: 700;
-  color: white;
-  text-align: center;
-  border-radius: 100px;
-  outline: none;
-  cursor: pointer;
   text-transform: none;
   line-height: normal;
   letter-spacing: 0.1px;
   padding: inherit;
   gap: initial;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  outline: none;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  background-color: #FF6B6B;
+  color: white;
 }
 .heroContentButtons .button-primary:hover {
   background-color: #ff3838;
   color: white;
 }
 .heroContentButtons .button-primary:focus {
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 8px white;
 }
 .heroContentButtons .button-primary:active {
-  background-color: #ff1f1f;
+  background-color: #9e0000;
 }
 @media (min-width: 1920px) {
   .heroContentButtons .button-primary {
@@ -253,33 +255,34 @@ header::after {
   }
 }
 .heroContentButtons .button-secondary {
-  background-color: transparent;
   width: 192px;
   height: -moz-min-content;
   height: min-content;
   font-size: 16px;
   font-weight: 700;
-  color: white;
-  text-align: center;
-  border-radius: 100px;
-  outline: 1px solid #ffffff;
-  cursor: pointer;
   text-transform: none;
   line-height: 10px;
   letter-spacing: normal;
   padding: 14px 19px;
   gap: 12.5px;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  outline: 1px solid #ffffff;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-}
-.heroContentButtons .button-secondary:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: white;
 }
+.heroContentButtons .button-secondary:hover {
+  background-color: white;
+  color: black;
+}
 .heroContentButtons .button-secondary:focus {
-  outline-offset: 2px;
+  box-shadow: 0 0 10px white;
 }
 .heroContentButtons .button-secondary:active {
-  background-color: rgba(0, 0, 0, 0);
+  outline-color: #e6e6e6;
+  color: black;
 }
 @media (min-width: 1920px) {
   .heroContentButtons .button-secondary {
@@ -309,6 +312,9 @@ header::after {
   .heroContentButtons .button-secondary::before {
     transform: scale(1.5);
   }
+}
+.heroContentButtons .button-secondary:hover::before {
+  filter: invert(1);
 }
 .heroContent .square {
   position: absolute;
@@ -596,7 +602,7 @@ header::after {
 .domainContainerTitle {
   font-size: clamp(2rem, 10vw, 56px);
   word-break: break-word;
-  width: 673px;
+  width: 520px;
   line-height: clamp(2rem, 10vw, 61.6px);
   font-weight: 500;
   letter-spacing: -3px;
@@ -658,32 +664,33 @@ header::after {
 .domainContainerForm .button-primary {
   right: 12px;
   top: 36.5px;
-  background-color: #FF6B6B;
   width: 157px;
   height: 48px;
   font-size: 16px;
   font-weight: 700;
-  color: white;
-  text-align: center;
-  border-radius: 100px;
-  outline: none;
-  cursor: pointer;
   text-transform: none;
   line-height: normal;
   letter-spacing: normal;
   padding: inherit;
   gap: initial;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  outline: none;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  background-color: #FF6B6B;
+  color: white;
 }
 .domainContainerForm .button-primary:hover {
   background-color: #ff3838;
   color: white;
 }
 .domainContainerForm .button-primary:focus {
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 8px white;
 }
 .domainContainerForm .button-primary:active {
-  background-color: #ff1f1f;
+  background-color: #9e0000;
 }
 .domainContainerForm .button-primary::after {
   content: "Search domain";
@@ -1233,32 +1240,36 @@ footer .footerContentRight .footerFormInput::placeholder {
 footer .footerContentRight .footerForm .button-secondary {
   right: 21.5px;
   top: 29.5px;
-  background-color: transparent;
   width: 16px;
   height: 28px;
   font-size: 16px;
   font-weight: 700;
-  color: white;
-  text-align: center;
-  border-radius: 100px;
-  outline: none;
-  cursor: pointer;
   text-transform: none;
   line-height: normal;
   letter-spacing: normal;
   padding: inherit;
   gap: initial;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  outline: none;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-}
-footer .footerContentRight .footerForm .button-secondary:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: white;
 }
+footer .footerContentRight .footerForm .button-secondary:hover {
+  background-color: white;
+  color: black;
+}
 footer .footerContentRight .footerForm .button-secondary:focus {
-  outline-offset: 2px;
+  box-shadow: 0 0 10px white;
 }
 footer .footerContentRight .footerForm .button-secondary:active {
-  background-color: rgba(0, 0, 0, 0);
+  outline-color: #e6e6e6;
+  color: black;
+}
+footer .footerContentRight .footerForm .button-secondary:hover img {
+  filter: invert(1);
 }
 footer hr.bottom {
   margin: 74px 0 40.5px 0;
@@ -1314,6 +1325,10 @@ footer .footerBottomSocials {
   footer .footerBottomSocials img {
     width: 30px;
   }
+}
+footer .footerBottomSocials img:hover {
+  cursor: pointer;
+  filter: invert(58%) sepia(35%) saturate(4071%) hue-rotate(322deg) brightness(107%) contrast(104%);
 }
 footer .squares {
   position: absolute;

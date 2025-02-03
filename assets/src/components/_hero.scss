@@ -67,7 +67,8 @@
             gap: 25px;
 
             .button-primary {
-                @include mixin.button($background: $button-primary,
+                @include mixin.button($type: "filled",
+                    $background: $button-primary,
                     $width: 194px,
                     $height: 54px,
                     $font-size: $font-size-sm,
@@ -98,7 +99,8 @@
             }
 
             .button-secondary {
-                @include mixin.button($background: transparent,
+                @include mixin.button($type: "outline",
+                    $background: transparent,
                     $width: 192px,
                     $height: min-content,
                     $font-size: $font-size-sm,
@@ -134,6 +136,10 @@
                 @media (min-width: 1920px) {
                     transform: scale(1.5);
                 }
+            }
+
+            .button-secondary:hover::before {
+                filter: invert(1);
             }
         }
 

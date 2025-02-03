@@ -3,7 +3,8 @@
 
 header {
     .button-header {
-        @include mixin.button($background: transparent,
+        @include mixin.button($type: "outline",
+            $background: transparent,
             $width: 143px,
             $height: min-content,
             $font-size: $font-size-xs,

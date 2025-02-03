@@ -16,7 +16,7 @@
         &Title {
             font-size: clamp(2rem, 10vw, $font-size-xxxl);
             word-break: break-word;
-            width: 673px;
+            width: 520px;
             line-height: clamp(2rem, 10vw, 61.6px);
             font-weight: $font-weight-medium;
             letter-spacing: -3px;
@@ -71,7 +71,8 @@
             .button-primary {
                 right: 12px;
                 top: 36.5px;
-                @include mixin.button($background: $button-primary,
+                @include mixin.button($type: "filled",
+                    $background: $button-primary,
                     $width: 157px,
                     $height: 48px,
                     $font-size: $font-size-sm,

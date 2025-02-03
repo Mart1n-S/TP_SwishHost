@@ -214,7 +214,8 @@ footer {
                 .button-secondary {
                     right: 21.5px;
                     top: 29.5px;
-                    @include mixin.button($background: transparent,
+                    @include mixin.button($type: "outline",
+                        $background: transparent,
                         $width: 16px,
                         $height: 28px,
                         $font-size: $font-size-sm,
@@ -223,6 +224,12 @@ footer {
                         $letter-spacing: normal,
                         $outline: none,
                         $line-height: normal);
+
+                    &:hover {
+                        img {
+                            filter: invert(1);
+                        }
+                    }
                 }
             }
         }
@@ -282,6 +289,11 @@ footer {
             img {
                 @media (min-width: 1600px) {
                     width: 30px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    filter: invert(58%) sepia(35%) saturate(4071%) hue-rotate(322deg) brightness(107%) contrast(104%);
                 }
             }
         }
